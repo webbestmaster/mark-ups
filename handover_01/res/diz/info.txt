@@ -6,3 +6,8 @@ https://collaborate.uxpin.com/1a9397a6d2c141ea54aae760c5b3d27a5ba3e100#/pages/63
 https://github.com/boundround/css
 https://github.com/boundround/javascript/tree/master/es5
 
+!! Region, All deals и Single deal
+// [10/20/16, 10:04:08 AM] dmitry.turovtsov: первых 3 это - Region, All deals и Single deal - это правильно?
+// [10/20/16, 10:04:48 AM] Julia Bozhkova: Да, все верно
+
+

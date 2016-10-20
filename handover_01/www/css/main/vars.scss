@@ -1,6 +1,16 @@
 
-// begin - reset css
+/* begin - vars css */
+
+$regularColor: #333;
+
+.regular-wrapper {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 0 14px;
+  font-family: signika-regular, sans-serif;
+  font-weight: normal;
+  color: $regularColor;
+}
 
 
-
-// end - reset css
+/* end - vars css */

@@ -1,0 +1,10 @@
+
+<nav class="local-navigation">
+    <a href="#" class="local-navigation__link">in the region</a>
+    <a href="#" class="local-navigation__link">places to go</a>
+    <a href="#" class="local-navigation__link">deals</a>
+    <a href="#" class="local-navigation__link">things to do</a>
+    <a href="#" class="local-navigation__link">itineraries</a>
+    <a href="#" class="local-navigation__link">stories</a>
+    <a href="#" class="local-navigation__link">did you know?</a>
+</nav>

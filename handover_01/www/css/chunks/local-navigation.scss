@@ -1,0 +1,19 @@
+.local-navigation {
+  @extend .regular-wrapper;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.local-navigation__link {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 16px 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: $regularColor;
+  text-transform: uppercase;
+}
+
+.local-navigation__link:hover {
+  background-color: #f5f5f5;
+}

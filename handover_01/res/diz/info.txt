@@ -3,6 +3,7 @@
 https://collaborate.uxpin.com/1a9397a6d2c141ea54aae760c5b3d27a5ba3e100#/pages/63597066/sitemap
 
 // css & js guide
+.this-block__inner-element--his-modifier {}
 https://github.com/boundround/css
 https://github.com/boundround/javascript/tree/master/es5
 

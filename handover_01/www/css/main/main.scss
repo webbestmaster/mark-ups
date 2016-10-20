@@ -1,8 +1,11 @@
-// sdfsdf
 /* initial part */
-@import "reset.scss";
-@import "vars.scss";
-@import "style.scss";
+@import 'user-reset.scss';
+@import 'vars.scss';
+@import 'style.scss';
+@import 'font-face.scss';
 
 /* chunks part */
-@import "../chunks/header.scss";
+@import '../chunks/promo-header.scss';
+@import '../chunks/local-navigation.scss';
+
+

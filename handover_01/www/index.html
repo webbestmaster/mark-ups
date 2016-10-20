@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- head is here -->
+    {{= 1 + 111 }}
+    {{= it.chunks['head.dot'] }}
+
+    {{ var dot = it.dot; }}
+    {{= dot.template(it.chunks['head.dot'])({}) }}
+
+    <title>fe</title>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     {{ var dot = it.dot; }}
-    {{= dot.template(it.chunks['head.dot'])({}) }}
+    {{= dot.template(it.chunks['head.html'])({}) }}
     <title>fe</title>
 </head>
 <body>
 
+{{= dot.template(it.chunks['header-menu.html'])({}) }}
 
-{{= dot.template(it.chunks['promo-header.dot'])({}) }}
-{{= dot.template(it.chunks['local-navigation.dot'])({}) }}
-
+{{= dot.template(it.chunks['promo-header.html'])({}) }}
+{{= dot.template(it.chunks['local-navigation.html'])({}) }}
 
 </body>
 </html>

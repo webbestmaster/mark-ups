@@ -111,5 +111,5 @@ gulp.task('watch:copy-data', function () {
 });
 
 
-gulp.task('default', gulp.series('clean', gulp.parallel('html', 'css', 'js', 'copy-data')));
+gulp.task('default', gulp.parallel('html', 'css', 'js', 'copy-data'));
 gulp.task('watch', gulp.series('default', gulp.parallel('watch:html', 'watch:css', 'watch:js', 'watch:copy-data')));

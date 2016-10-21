@@ -33,6 +33,14 @@
   background-repeat: no-repeat;
 }
 
+.header-menu__link--drop-down {
+  background-image: url(../i/header-menu/dropdown-arrow.svg);
+  background-position: right 3px;
+  background-size: 28px 28px;
+  padding-right: 27px;
+  margin-right: 9px;
+}
+
 .header-menu__link--no-addon {
   padding-right: 27px;
 }
@@ -55,12 +63,6 @@
   padding: 5px 24px 4px 22px;
   float: right;
   border-radius: 6px;
-}
-
-.header-menu__drop-down {
-  float: right;
-  width: 27px;
-  height: 21px; /* see .header-menu__link { line-height: 21px; } */
 }
 
 

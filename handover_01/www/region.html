@@ -1,16 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-    {{ var dot = it.dot; }}
-    {{= dot.template(it.chunks['head.html'])({}) }}
+    {{ var dot = it.dot, chunks = it.chunks; }}
+    {{= dot.template(chunks['head.html'])({}) }}
     <title>fe</title>
 </head>
 <body>
 
-{{= dot.template(it.chunks['header-menu.html'])({}) }}
+{{= it.chunks['header-menu.html'] }}
 
-{{= dot.template(it.chunks['promo-header.html'])({}) }}
-{{= dot.template(it.chunks['local-navigation.html'])({}) }}
+{{= it.chunks['promo-header.html'] }}
+
+{{= it.chunks['local-navigation.html'] }}
+
+{{= it.chunks['promo-text.html'] }}
 
 </body>
 </html>

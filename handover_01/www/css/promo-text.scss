@@ -1,0 +1,21 @@
+.promo-text {
+    @extend .regular-wrapper;
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+}
+
+.promo-text__paragraph {
+    font-size: 22px;
+    line-height: 34px;
+}
+
+.promo-text__read-more {
+    display: inline-block;
+    margin: 0 auto;
+    color: #959595;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 25px;
+}
+

@@ -6,7 +6,7 @@ const clean = require('gulp-rimraf');
 
 const dot = require('dot');
 const template = require('gulp-dot-template');
-var prettifyHtml = require('gulp-html-prettify');
+const prettifyHtml = require('gulp-html-prettify');
 
 const cssimport = require('gulp-cssimport');
 const sass = require('gulp-sass');

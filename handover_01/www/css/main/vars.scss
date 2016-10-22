@@ -1,11 +1,13 @@
 
 /* begin - vars css */
 
-$regularColor: #333;
+$regularColor:          #333333;
+$regularColorLight:     #959595;
+$regularColorLighter:   #a3a3a3;
 
 .regular-wrapper {
   margin: 0 auto;
-  max-width: 1170px;
+  width: 1170px;
   padding: 0 14px;
   font-family: signika-regular, sans-serif;
   font-weight: normal;

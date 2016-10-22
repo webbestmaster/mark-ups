@@ -55,7 +55,31 @@
   line-height: 22px;
 }
 
+.card-go-to {
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: $regularColor;
+  padding: 21px 0;
+  left: 0;
+  width: 100%;
+  background-image: url(../i/point-card/arrow-right-big.svg);
+  background-repeat: no-repeat;
+  /* FIXME: FIX THIS ARROW - see into design */
+  background-position: right 0;
+  background-size: 45px;
+}
 
+.card-go-to__text {
+  letter-spacing: -0.5px;
+}
+
+.card-go-to__text--go-to {
+  padding-left: 29px;
+  color: $regularColorLighter;
+}
 
 
 

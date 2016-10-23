@@ -6,6 +6,30 @@ body {
   padding-bottom: 500px;
 }
 
+.regular-wrapper {
+  margin: 0 auto;
+  width: 1170px;
+  padding: 0 14px;
+  font-family: signika-light, sans-serif;
+  font-weight: normal;
+  color: $regularColor;
+  position: relative;
+}
+
+.clear-self {
+  display: block;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.card-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
 
 
 /* end - style css */

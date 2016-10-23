@@ -1,11 +1,12 @@
 /* initial part */
-@import 'user-reset.scss';
-@import 'vars.scss';
-@import 'style.scss';
 @import 'font-face.scss';
+@import 'vars.scss';
+@import 'user-reset.scss';
+@import 'style.scss';
 
 /* services */
 @import '../scroll-area.scss';
+@import '../horizontal-slider.scss';
 
 /* chunks part */
 @import '../header-menu.scss';
@@ -18,6 +19,7 @@
 @import '../region-things-to-do.scss';
 @import '../wild-ad-banner.scss';
 @import '../stories.scss';
+@import '../did-you-know.scss';
 
 
 

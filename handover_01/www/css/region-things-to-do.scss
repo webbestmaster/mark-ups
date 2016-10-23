@@ -1,0 +1,104 @@
+
+.region-things-to-do {
+  @extend .places-to-go;
+}
+
+.region-things-to-do__header {
+  @extend .places-to-go__header;
+}
+
+.region-things-to-do__load-more {
+  @extend .places-to-go__load-more;
+}
+
+.region-things-to-do__card-holder {
+  width: 1200px;
+  margin: 0 auto;
+  &:after {
+    @extend .clear-self:after;
+  }
+}
+
+.region-things-to-do-card {
+  width: 371px;
+  height: 380px;
+  position: relative;
+  float: left;
+  margin: 0 14px 40px;
+  @extend .card-shadow;
+}
+
+.region-things-to-do-card__headline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+.region-things-to-do-card__cost {
+  float: left;
+  color: #fff;
+  padding: 18px;
+  font-size: 20px;
+}
+
+.region-things-to-do-card__book {
+  float: right;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 12px;
+  background-color: #fe7e57;
+  margin: 11px 13px 0 0;
+}
+
+.region-things-to-do-card__point-photo {
+  display: block;
+  width: 100%;
+  padding-bottom: 23px;
+
+}
+
+.region-things-to-do-card__header {
+  text-align: left;
+  font-size: 28px;
+  padding: 0 25px;
+}
+
+.region-things-to-do-card__theme-mark {
+  float: left;
+  background-color: $regularColorUltraLight;
+  border-radius: 12px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  text-transform: uppercase;
+  padding: 4px 11px;
+}
+
+.region-things-to-do-card__load-more {
+  @extend .places-to-go__load-more;
+}
+
+.region-things-to-do-card--ad {
+  background-color: $adsBackgroundColor;
+  border: 1px solid $adsBorderColor;
+  width: 301px;
+  height: 310px;
+  padding: 34px;
+}
+
+.region-things-to-do-card-ad__img {
+  @extend .family-deals-card-ad__img;
+}
+
+.region-things-to-do-card-ad__paragraph {
+  @extend .family-deals-card-ad__paragraph;
+}
+
+
+

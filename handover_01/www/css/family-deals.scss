@@ -4,7 +4,6 @@
 
 .family-deals__header {
   @extend .places-to-go__header;
-  padding-bottom: 49px;
 }
 
 .family-deals__load-more {
@@ -103,12 +102,6 @@
   }
 
 }
-
-
-/* ads */
-$adsBackgroundColor:       #f0f0f0;
-$adsBorderColor:           #cccccc;
-$adsTextColor:             #a2a2a2;
 
 .family-deals-card--ad {
   background-color: $adsBackgroundColor;

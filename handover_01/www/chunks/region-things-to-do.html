@@ -1,0 +1,38 @@
+<div class="region-things-to-do">
+
+    <h3 class="region-things-to-do__header">Things to do in Asia</h3>
+
+    <div class="region-things-to-do__card-holder">
+
+        {{~ [1, 2, 3, 4, 5, 6] :item }}
+
+            {{? item === 3}}
+
+                <div class="region-things-to-do-card region-things-to-do-card--ad">
+                    <img src="img/region-things-to-do/region-things-to-do-ad.jpg" alt="" class="region-things-to-do-card-ad__img">
+                    <p class="region-things-to-do-card-ad__paragraph">Sponsored</p>
+                </div>
+
+            {{??}}
+
+                <div class="region-things-to-do-card">
+                    <div class="region-things-to-do-card__headline">
+                        <div class="region-things-to-do-card__cost">$$</div>
+                        <div class="region-things-to-do-card__book">book</div>
+                    </div>
+                    <img src="img/region-things-to-do/region-things-to-do-photo.jpg" alt="" class="region-things-to-do-card__point-photo">
+
+                    <h3 class="region-things-to-do-card__header">Lotte World</h3>
+                    <span class="region-things-to-do-card__theme-mark">Theme mark</span>
+
+                </div>
+
+            {{?}}
+
+        {{~}}
+
+    </div>
+
+    <a class="region-things-to-do-card__load-more" href="#">load more</a>
+
+</div>

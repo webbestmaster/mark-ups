@@ -1,0 +1,19 @@
+.wild-ad-banner {
+  background-color: $adsBackgroundColor;
+  padding: 19px;
+}
+
+.wild-ad-banner__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.wild-ad-banner__paragraph {
+  color: $adsTextColor;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+}
+
+

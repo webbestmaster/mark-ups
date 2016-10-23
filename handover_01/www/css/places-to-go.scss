@@ -1,0 +1,79 @@
+.places-to-go {
+  display: block;
+  text-align: center;
+  padding-bottom: 72px;
+  border-bottom: 1px solid $regularColorUltraLight;
+}
+
+.places-to-go__header {
+  font-size: 40px;
+  padding-bottom: 51px;
+}
+
+.places-to-go__card-holder {
+  width: 1200px;
+  margin: 0 auto;
+  &:after {
+    @extend .clear-self:after;
+  }
+}
+
+.places-to-go-card {
+  width: 371px;
+  height: 479px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin: 0 14px;
+}
+
+.places-to-go-card__header {
+  text-align: left;
+  font-size: 18px;
+  background-image: url(../i/places-to-go/pin-white.png);
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  padding: 20px 0 13px 49px;
+  margin-right: 32px;
+  background-size: 21px;
+  background-position: 17px 17px;
+  color: #fff;
+}
+
+.places-to-go-card__card-name {
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  color: #fff;
+  font-size: 52px;
+  width: 80%;
+  text-align: center;
+}
+
+.places-to-go-card__background {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+.places-to-go__load-more {
+  display: inline-block;
+  margin: 21px auto 0;
+  color: $regularColorLight;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 25px;
+}
+
+
+

@@ -18,12 +18,11 @@ $regularColorUltraLight:   #eaeaea;
 
 .clear-self {
   display: block;
-}
-
-.clear-self:after {
-  content: '';
-  display: block;
-  clear: both;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
 
 /* end - vars css */

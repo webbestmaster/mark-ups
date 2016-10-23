@@ -11,13 +11,12 @@
 }
 
 .promo-text__read-more {
+    color: $regularColorLight;
     display: inline-block;
     margin: 0 auto;
-    color: $regularColorLight;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 15px;
-    font-weight: bold;
     padding: 25px;
 }
 

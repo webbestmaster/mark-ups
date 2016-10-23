@@ -1,0 +1,36 @@
+.footer {
+  height: 140px;
+  background-color: $buttonColor;
+  .regular-wrapper {
+    height: 100%;
+  }
+}
+
+.footer__logo {
+  float: right;
+  width: 108px;
+  height: 101px;
+  text-indent: -300px;
+  overflow: hidden;
+  background-image: url(../i/footer/clear-logo.png);
+  position: relative;
+  top: 16px;
+  left: 34px;
+}
+
+.footer__links-holder {
+  padding-top: 27px;
+}
+
+.footer__link {
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 38px;
+}
+
+.footer__copyright {
+  position: absolute;
+  bottom: 39px;
+  font-size: 16px;
+}

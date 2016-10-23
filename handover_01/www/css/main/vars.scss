@@ -5,13 +5,13 @@ $regularColor:             #333333;
 $regularColorLight:        #959595;
 $regularColorLighter:      #a3a3a3;
 $regularColorUltraLight:   #eaeaea;
-
+$buttonColor:              #6cb7ca;
 
 .regular-wrapper {
   margin: 0 auto;
   width: 1170px;
   padding: 0 14px;
-  font-family: signika-regular, sans-serif;
+  font-family: signika-light, sans-serif;
   font-weight: normal;
   color: $regularColor;
 }

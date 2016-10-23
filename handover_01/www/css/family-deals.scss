@@ -25,6 +25,7 @@
   float: left;
   overflow: hidden;
   margin: 0 15px;
+  transform: translate3d(0, 0, 0);
   @extend .card-shadow;
 }
 
@@ -52,7 +53,7 @@
 .family-deals-card__included-icon {
   display: inline-block;
   position: relative;
-  top: 1px;
+  top: 3px;
   margin: 0 5px 0 7px;
 }
 
@@ -80,6 +81,11 @@
   padding: 7px 10px;
   text-transform: uppercase;
   font-size: 18px;
+}
+
+.family-deals-card__see-full-itinerary {
+  @extend .family-deals-card__see-deal;
+  margin-top: 32px;
 }
 
 .family-deals-card__offer-ends {

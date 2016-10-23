@@ -8,6 +8,9 @@
   },
   "author": "dim",
   "license": "ISC",
+  "dependencies": {
+    "gulp-tinypng": "^1.0.2"
+  },
   "devDependencies": {
     "dot": "^1.0.3",
     "gulp": "github:gulpjs/gulp#4.0",

@@ -1,9 +1,11 @@
 
 /* begin - vars css */
 
-$regularColor:          #333333;
-$regularColorLight:     #959595;
-$regularColorLighter:   #a3a3a3;
+$regularColor:             #333333;
+$regularColorLight:        #959595;
+$regularColorLighter:      #a3a3a3;
+$regularColorUltraLight:   #eaeaea;
+
 
 .regular-wrapper {
   margin: 0 auto;
@@ -14,5 +16,14 @@ $regularColorLighter:   #a3a3a3;
   color: $regularColor;
 }
 
+.clear-self {
+  display: block;
+}
+
+.clear-self:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
 /* end - vars css */

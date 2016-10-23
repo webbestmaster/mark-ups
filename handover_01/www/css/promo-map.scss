@@ -18,17 +18,27 @@
   width: 337px;
   background-color: #fff;
   margin-left: -585px;
+
+  .scroll-area {
+    margin-top: 19px;
+    height: 248px;
+  }
+
+  .scroll-area__content {
+    display: block;
+  }
+
 }
 
 .point-card__header {
   font-size: 18px;
-  background-image: url(../i/point-card/pin.svg);
+  background-image: url(../i/point-card/pin.png);
   background-repeat: no-repeat;
   text-transform: uppercase;
   padding: 4px 0 13px 34px;
   margin-right: 32px;
-  background-size: 49px;
-  background-position: -12px -10px;
+  background-size: 21px;
+  background-position: 2px 1px;
 }
 
 .point-card__close {
@@ -65,11 +75,12 @@
   padding: 21px 0;
   left: 0;
   width: 100%;
-  background-image: url(../i/point-card/arrow-right-big.svg);
   background-repeat: no-repeat;
-  /* FIXME: FIX THIS ARROW - see into design */
-  background-position: right 0;
-  background-size: 45px;
+  background-color: #fff;
+  border-top: 1px solid $regularColorUltraLight;
+  background-position: 327px 25px;
+  background-size: 13px;
+  background-image: url(../i/point-card/next.png);
 }
 
 .card-go-to__text {
@@ -81,13 +92,27 @@
   color: $regularColorLighter;
 }
 
+.region-preview-item {
+  padding-right: 16px;
+  margin-bottom: 10px;
+  &:after { @extend .clear-self:after; }
+}
 
+.region-preview-item__image {
+  float: left;
+  width: 125px;
+  height: 100px;
+  margin-right: 17px;
+}
 
+.region-preview-item__header {
+  padding-top: 12px;
+  font-size: 14px;
+}
 
-
-
-
-
+.region-preview-item__paragraph {
+  font-size: 22px;
+}
 
 
 

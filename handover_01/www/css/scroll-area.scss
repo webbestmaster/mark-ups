@@ -2,6 +2,7 @@
     overflow-y: auto;
 }
 
-.scroll-area {
+.scroll-area__content {
     display: block;
+    &:after { @extend .clear-self:after; }
 }

@@ -6,6 +6,7 @@
   height: 680px;
   position: relative;
   background-attachment: fixed;
+  overflow: hidden; /* IE-workaround */
 }
 
 .promo-header__header {

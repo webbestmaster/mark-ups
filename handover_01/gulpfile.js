@@ -13,6 +13,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
 const tinypng = require('gulp-tinypng');
+const server = require('gulp-server-livereload');
 
 const rootFolder = 'www';
 const distFolder = 'dist';
@@ -115,6 +116,7 @@ gulp.task('watch:copy-data', function () {
 gulp.task('default', gulp.parallel('html', 'css', 'js', 'copy-data'));
 gulp.task('watch', gulp.series('default', gulp.parallel('watch:html', 'watch:css', 'watch:js', 'watch:copy-data')));
 
+
 gulp.task('tiny-png', function () {
     return gulp.src(['www/img/**/*'])
         .pipe(tinypng('f8ZqkiaR5hwI9QRdc8Dwropue4kENmRp')) // done 7 march
@@ -125,4 +127,17 @@ gulp.task('tiny-png', function () {
         // uY9x_ytUQ0sq9-bB8iTvwGnmiWVci4an - web.best.master@gmail.com
         // RmSQIT1W2KC2_gZf27_KaZ7GWIzpmKJu - ae.fan.game@gmail.com
         .pipe(gulp.dest('tinypng-dist'));
+});
+
+
+gulp.task('webserver', function() {
+    gulp.src('./dist/')
+        .pipe(server({
+            livereload: true,
+            directoryListing: true,
+            open: true,
+            host: '0.0.0.0',
+            port: 8080,
+            log: 'debug'
+        }));
 });

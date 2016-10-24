@@ -16,8 +16,7 @@ const tinypng = require('gulp-tinypng');
 
 const rootFolder = 'www';
 const distFolder = 'dist';
-// const rootStaticFolder = path.join(rootFolder, 'static');
-const staticFolders = ['static', 'img', 'i', 'font'];
+const staticFolders = ['img', 'i', 'font'];
 
 const readFiles = require('./gulp/my-gulp-util').readFiles;
 

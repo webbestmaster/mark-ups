@@ -1,17 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- head is here -->
+    {{ var dot = it.dot, chunks = it.chunks; }}
+    {{= dot.template(chunks['head.html'])({}) }}
     <title>all deals</title>
 </head>
 <body>
-sdf
-sad
-f
-asf
-as
-fas
-d
+
+{{= it.chunks['header-menu.html'] }}
+
+{{= dot.template(it.chunks['promo-header.html'])({
+    image: 'img/promo-header/all-deals-promo-header.jpg',
+    text: 'Family Deals'
+}) }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{= it.chunks['footer.html'] }}
+
 
 </body>
 </html>

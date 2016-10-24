@@ -1,12 +1,23 @@
 .promo-header {
-  background-image: url(../img/promo-header/region-promo-header.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  /* do not remove me
+    background-image: url(../img/promo-header/region-promo-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  */
   height: 680px;
   position: relative;
-  background-attachment: fixed;
   overflow: hidden; /* IE-workaround */
+}
+
+.promo-header__background {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: auto;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
 }
 
 .promo-header__header {
@@ -20,6 +31,7 @@
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   font-weight: bold;
+  z-index: 1;
 }
 
 

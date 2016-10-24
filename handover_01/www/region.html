@@ -9,7 +9,10 @@
 
 {{= it.chunks['header-menu.html'] }}
 
-{{= it.chunks['promo-header.html'] }}
+{{= dot.template(it.chunks['promo-header.html'])({
+    image: 'img/promo-header/region-promo-header.jpg',
+    text: 'East Asia'
+}) }}
 
 {{= it.chunks['local-navigation.html'] }}
 

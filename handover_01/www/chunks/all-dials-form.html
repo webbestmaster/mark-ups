@@ -28,6 +28,44 @@
 
 	</div>
 
+	<div class="dials-form-section">
+		
+		<h4 class="dials-form-section__header">
+			Date<span class="dials-form-section__reset-section"></span>
+		</h4>
+
+		<div class="dials-form-section__date-pickers-holder">
+			calendar is will be here,<br/>please wait :)
+		</div>
+
+	</div>
+
+
+
+	<div class="dials-form-section">
+
+		<h4 class="dials-form-section__header">
+			Duration <span class="dials-form-section__reset-section"></span>
+		</h4>
+
+		{{ var list = ['Day trip (1 day)', 'Weekend (2 days)', 'Week (5-7 days)', 'Multi-week (7+ days)']; }}
+		
+		{{~ list :item }}
+		<label class="dials-form-section__label">
+			{{= item }}
+			  <input class="dials-form-section__checkboxradio js-dials-form-section__checkboxradio" type="checkbox" />
+		</label>
+		{{~}}		
+
+
+	</div>
+
+
+
+
+
+
+
 
 </div>
    

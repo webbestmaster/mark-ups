@@ -18,7 +18,7 @@
 }
 
 .dials-form-section {
-  display: block;
+  padding-bottom: 16px;
 }
 
 .dials-form-section__header {
@@ -42,22 +42,49 @@
     right: -5px;
 }
 
-.dials-form-section__label {
-    text-indent: 4px;
-    font-size: 16px;
-    display: block;
-    width: 100%;
-    clear: both;
-    padding-bottom: 13px;
-}
-
-.dials-form-section__select {
+.dials-form-section__select,
+.dials-form-section__checkboxradio {
   float: right;
 }
 
 /* override jq css */
 /* I hate override jq's styles!!! F*****CK!!! */
 .dials-form-section__label {
+
+  text-indent: 4px;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  clear: both;
+  padding: 0 0 13px 0px;
+  text-align: left;    
+
+  .ui-checkboxradio-icon {
+    float: right;
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid $adsBorderColor;
+    position: relative;
+    top: -1px;
+    right: -2px;
+    box-shadow: none;
+    background-size: 27px;
+    background-position: center;
+    &.ui-state-checked {
+      background-image: url(../i/form/tick.svg);
+      border-color: $regularColor;
+      border-width: 2px;
+      top: -2px;
+      right: -3px;
+    }
+  }
+
+  .ui-checkboxradio-icon-space {
+    display: none;
+  }
 
   .ui-selectmenu-button.ui-button {
       color: $regularColorLight;
@@ -133,16 +160,24 @@
 .ui-menu-item-wrapper.ui-state-active {
   color: $regularColor;
   background-color: $regularColorUltraLight;
-    margin: 0;
-    display: block;
-    width: 21px;
-    padding-left: 3.5px;
-    margin-left: 3px;
+  margin: 0;
+  display: block;
+  width: 21px;
+  padding-left: 3.5px;
+  margin-left: 3px;
 }
 
 .ui-selectmenu-menu.ui-menu {
   padding-bottom: 2px;
 }
+
+
+
+
+
+
+
+
 
 
 

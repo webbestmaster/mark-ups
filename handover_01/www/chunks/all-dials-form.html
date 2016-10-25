@@ -16,9 +16,9 @@
 		<label class="dials-form-section__label">
 			{{= item }}
 			<select class="dials-form-section__select js-dials-form-section__select">
-				<option>0</option>
+				<option selected="selected">0</option>
 				<option>1</option>
-				<option selected="selected">2</option>
+				<option>2</option>
 				<option>3</option>
 				<option>4</option>
 				<option>5+</option>
@@ -35,7 +35,8 @@
 		</h4>
 
 		<div class="dials-form-section__date-pickers-holder">
-			calendar is will be here,<br/>please wait :)
+			<!-- FIXME: add needed element -->
+			Calendar will be here.<br/>Soon.<br/>Please wait :)
 		</div>
 
 	</div>
@@ -65,15 +66,63 @@
 			Price <span class="dials-form-section__reset-section"></span>
 		</h4>
 
-		
-		
+		<div class="dials-form-section__date-pickers-holder">
+			<!-- FIXME: add needed element -->
+			Ranger will be here.<br/>Soon.<br/>Please wait :)
+		</div>
+
 	</div>
 
+	<div class="dials-form-section">
 
+		<h4 class="dials-form-section__header">
+			Regions <span class="dials-form-section__reset-section"></span>
+		</h4>
 
+		{{ var list = [ 'North America', 'South America', 'Oceania', 'Europe', 'East Asia', 'Southeast Asia', 'South Asia', 'Middle East', 'Africa', 'Pacific Islands'];}}
 
+		{{~ list :item }}
+		<label class="dials-form-section__label">
+			{{= item }}
+			<input class="dials-form-section__checkboxradio js-dials-form-section__checkboxradio" type="checkbox" />
+		</label>
+		{{~}}
 
+	</div>
 
+	<div class="dials-form-section">
+
+		<h4 class="dials-form-section__header">
+			Regions <span class="dials-form-section__reset-section"></span>
+		</h4>
+
+		{{ var list = [ 'North America', 'South America', 'Oceania', 'Europe', 'East Asia', 'Southeast Asia', 'South Asia', 'Middle East', 'Africa', 'Pacific Islands'];}}
+
+		{{~ list :item }}
+		<label class="dials-form-section__label">
+			{{= item }}
+			<input class="dials-form-section__checkboxradio js-dials-form-section__checkboxradio" type="checkbox" />
+		</label>
+		{{~}}
+
+	</div>
+
+	<div class="dials-form-section">
+
+		<h4 class="dials-form-section__header">
+			Type <span class="dials-form-section__reset-section"></span>
+		</h4>
+
+		{{ var list = ['Luxury', 'Cruise', 'Sports & Action', 'Cultural experiences', 'Sightseeing & Photography', 'Food']; }}
+
+		{{~ list :item }}
+		<label class="dials-form-section__label">
+			{{= item }}
+			<input class="dials-form-section__checkboxradio js-dials-form-section__checkboxradio" type="checkbox" />
+		</label>
+		{{~}}
+
+	</div>
 
 </div>
    

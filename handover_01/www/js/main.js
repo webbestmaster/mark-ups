@@ -26,9 +26,10 @@
         }
 
     }
-
+    
     win.addEventListener('load', function () {
         bindScrollToNode();
+        $( ".js-dials-form-section__select" ).selectmenu();
     }, false);
 
 }(window, window.document));

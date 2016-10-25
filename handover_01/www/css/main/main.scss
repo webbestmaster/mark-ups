@@ -4,6 +4,10 @@
 @import 'user-reset.scss';
 @import 'style.scss';
 
+/* lib */
+@import '../lib/jquery-ui.css';
+@import '../lib/jquery-ui.structure.css';
+
 /* services */
 @import '../scroll-area.scss';
 @import '../horizontal-slider.scss';
@@ -23,6 +27,11 @@
 @import '../footer.scss';
 @import '../featured-deals.scss';
 
+/* all deals */
+@import '../all-dials.scss';
+@import '../all-dials-form.scss';
+@import '../all-dials-result.scss';
+@import '../all-dials-pagination.scss';
 
 
 

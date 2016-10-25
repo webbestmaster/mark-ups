@@ -16,23 +16,31 @@
 
 {{= dot.template(it.chunks['featured-deals.html'])({}) }}
 
+<div class="all-dials">
+
+	{{= dot.template(it.chunks['all-dials-form.html'])({
+		chunks: it.chunks
+	}) }}
+
+	{{= dot.template(it.chunks['all-dials-result.html'])({
+		chunks: it.chunks
+	}) }}
+
+	{{= dot.template(it.chunks['all-dials-pagination.html'])({
+		chunks: it.chunks
+	}) }}
+
+
+</div>
+
+
+
+<div style="height: 500px"></div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-{{= it.chunks['footer.html'] }}
+<!-- {{= it.chunks['footer.html'] }} -->
 
 
 </body>

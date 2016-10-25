@@ -8,5 +8,8 @@
 .all-deals__main-holder {
   width: 1170px;
   margin: 0 auto;
+  &:after {
+    @extend .clear-self:after;
+  }
 }
 

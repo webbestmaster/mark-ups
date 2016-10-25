@@ -1,5 +1,63 @@
 .all-deals-pagination {
-  display: block;
+  text-align: center;
+  border-top: 1px solid $adsBorderColor;
+  clear: both;
+  padding-top: 28px;
+  padding-bottom: 93px;
+}
+
+.deals-pagination__link-active-mark {
+  display: none;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0px;
+  top: -30px;
+}
+
+.deals-pagination__link {
+  position: relative;
+  display: inline-block;
+  font-size: 26px;
+  color: $regularColorLight;
+  padding: 0 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  &.deals-pagination__link--active {
+    .deals-pagination__link-active-mark {
+      display: block;
+      background-color: $regularColor;
+    }
+    color: $regularColor;
+  }
+  &:hover {
+    .deals-pagination__link-active-mark {
+      display: block;
+      background-color: $regularColorLight;
+    }
+    color: $regularColorLight;
+  }
+}
+
+.deals-pagination__left-arrow,
+.deals-pagination__right-arrow {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 18px;
+  display: inline-block;
+  font-size: 26px;
+  width: 29px;
+}
+
+.deals-pagination__left-arrow {
+  margin-right: 29px;
+  background-image: url(../i/pagination/pagination-arrow-left.png);
+}
+
+.deals-pagination__right-arrow {
+  margin-left: 29px;
+  background-image: url(../i/pagination/pagination-arrow-right.png);
 }
 
 

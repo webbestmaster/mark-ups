@@ -1,7 +1,41 @@
 <div class="all-deals-pagination">
-	
-	
 
-	<h1>all-deals-pagination</h1>
+	<span class="deals-pagination__left-arrow">&nbsp;</span>
+
+	<span class="deals-pagination__link">
+		<span class="deals-pagination__link-active-mark"></span>
+		1
+	</span>
+
+	<span class="deals-pagination__link">
+		<span class="deals-pagination__link-active-mark"></span>
+		&hellip;
+	</span>
+
+	{{ for (var i = 3; i <= 13; i += 1 ) { }}
+		{{? i === 5 }}
+		<span class="deals-pagination__link deals-pagination__link--active">
+			<span class="deals-pagination__link-active-mark"></span>
+			{{= i }}
+		</span>
+		{{??}}
+		<span class="deals-pagination__link">
+			<span class="deals-pagination__link-active-mark"></span>
+			{{= i }}
+		</span>
+		{{?}}
+	{{ }; }}
+
+	<span class="deals-pagination__link">
+		<span class="deals-pagination__link-active-mark"></span>
+		&hellip;
+	</span>
+
+	<span class="deals-pagination__link">
+		<span class="deals-pagination__link-active-mark"></span>
+		18
+	</span>
+
+	<span class="deals-pagination__right-arrow">&nbsp;</span>
 
 </div>

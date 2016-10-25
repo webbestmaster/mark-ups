@@ -25,28 +25,19 @@
 	}) }}
 
 	{{= dot.template(it.chunks['all-deals-result.html'])({
-		chunks: it.chunks
+		dot: dot,
+		chunks: chunks
 	}) }}
-
-<!--
-	{{= dot.template(it.chunks['all-deals-pagination.html'])({
-		chunks: it.chunks
-	}) }}
--->
 
 	</div>
 
+	{{= dot.template(it.chunks['all-deals-pagination.html'])({
+		chunks: chunks
+	}) }}
+
 </div>
 
-
-
-<div style="height: 500px"></div>
-
-
-
-
-<!-- {{= it.chunks['footer.html'] }} -->
-
+ {{= it.chunks['footer.html'] }}
 
 </body>
 </html>

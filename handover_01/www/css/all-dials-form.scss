@@ -1,31 +1,31 @@
 .all-dials-form {
-	display: block;	
-	width: 250px;
+  display: block; 
+  width: 250px;
     margin: 0 340px;
 }
 
 .all-dials-form__header {
-	color: $regularColorLight;
-	font-size: 40px;
-	padding-bottom: 33px;		
+  color: $regularColorLight;
+  font-size: 40px;
+  padding-bottom: 33px;   
 }
 
 .dials-form-section__reset-all {
-	font-size: 14px;
-	margin-top: 23px; 
-	float: right;
-	text-decoration: underline;
+  font-size: 14px;
+  margin-top: 23px; 
+  float: right;
+  text-decoration: underline;
 }
 
 .dials-form-section {
-	display: block;
+  display: block;
 }
 
 .dials-form-section__header {
-	color: $regularColorLight;
-	font-size: 18px;
-	text-transform: uppercase;
-	padding-bottom: 22px;
+  color: $regularColorLight;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-bottom: 22px;
 }
 
 .dials-form-section__reset-section {
@@ -43,92 +43,96 @@
 }
 
 .dials-form-section__label {
-	text-indent: 4px;
-	font-size: 16px;
+    text-indent: 4px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    clear: both;
+    padding-bottom: 13px;
 }
 
 .dials-form-section__select {
-	float: right;
+  float: right;
 }
 
 /* override jq css */
 /* I hate override jq's styles!!! F*****CK!!! */
 .dials-form-section__label {
 
-	.ui-selectmenu-button.ui-button {
-    	color: $regularColorLight;
-	    border: 2px solid $regularColorLight;
-	    background-color: #fff;
-	    float: right;
-	    width: 46px;
-	    position: relative;
-	    border-radius: 5px;
-	    top: -5px;
-	    right: -2px;
-	    height: 21px;
-	    padding: 0;
-	    margin: 0;
-	    .ui-selectmenu-icon.ui-icon {
-	    	opacity: 0.5;
-	    }
-		&.ui-selectmenu-button-open,
-		&:focus.ui-selectmenu-button-open {
-			border-bottom: none;
-			border-bottom-right-radius: 0;
-    		border-bottom-left-radius: 0;
-    		}
-	    &:focus {
-		    border: 2px solid $regularColor;
-		    color: $regularColor;
-		    .ui-selectmenu-icon.ui-icon {
-		    	opacity: 1;
-		    }
-	    	outline: none;
-	    }
-		
+  .ui-selectmenu-button.ui-button {
+      color: $regularColorLight;
+      border: 2px solid $regularColorLight;
+      background-color: #fff;
+      float: right;
+      width: 46px;
+      position: relative;
+      border-radius: 5px;
+      top: -5px;
+      right: -2px;
+      height: 21px;
+      padding: 0;
+      margin: 0;
+      .ui-selectmenu-icon.ui-icon {
+        opacity: 0.5;
+      }
+    &.ui-selectmenu-button-open,
+    &:focus.ui-selectmenu-button-open {
+      border-bottom: none;
+      border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        }
+      &:focus {
+        border: 2px solid $regularColor;
+        color: $regularColor;
+        .ui-selectmenu-icon.ui-icon {
+          opacity: 1;
+        }
+        outline: none;
+      }
+    
 
-	}
-	.ui-selectmenu-text {
-    	display: block;
-    	margin: 0;
-    	padding: 0;
-    	font-size: 17px;
-    	text-indent: 6px;
-	}
-	.ui-selectmenu-icon.ui-icon {
-	    background-image: url(../i/form/dropdown-arrow-down-black.svg);
-	    background-repeat: no-repeat;
-	    float: right;
-	    height: 100%;
-	    text-indent: 0;
-	    width: 20px;
-	    background-position: center;
-	    background-size: 20px;
-	}
+  }
+  .ui-selectmenu-text {
+      display: block;
+      margin: 0;
+      padding: 0;
+      font-size: 17px;
+      text-indent: 6px;
+  }
+  .ui-selectmenu-icon.ui-icon {
+      background-image: url(../i/form/dropdown-arrow-down-black.svg);
+      background-repeat: no-repeat;
+      float: right;
+      height: 100%;
+      text-indent: 0;
+      width: 20px;
+      background-position: center;
+      background-size: 20px;
+  }
 
 }
 
 .ui-selectmenu-menu {
-	width: 46px;
-	background-color: #fff;
+  width: 46px;
+  background-color: #fff;
     border: 2px solid $regularColor;
-	border-top: none;
-	padding-top: 2px;
-	margin-top: -2px;
-	border-top-right-radius: 0;
-	border-top-left-radius: 0;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
+  border-top: none;
+  padding-top: 2px;
+  margin-top: -2px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 
 }
 
 .ui-menu-item-wrapper {
-	color: $regularColorLight;
+  color: $regularColorLight;
 }
 
 .ui-menu-item-wrapper.ui-state-active {
-	color: $regularColor;
-	background-color: $regularColorUltraLight;
+  color: $regularColor;
+  background-color: $regularColorUltraLight;
     margin: 0;
     display: block;
     width: 21px;
@@ -137,7 +141,7 @@
 }
 
 .ui-selectmenu-menu.ui-menu {
-	padding-bottom: 2px;
+  padding-bottom: 2px;
 }
 
 

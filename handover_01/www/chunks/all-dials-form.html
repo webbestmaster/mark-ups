@@ -10,8 +10,11 @@
 			Family size <span class="dials-form-section__reset-section"></span>
 		</h4>
 
+		{{ var list = ['Adults', 'Teenagers', 'Kids (6 to 12 years)', 'Kids (3 to 5 years)', 'Infants (<2 years)']; }}
+
+		{{~ list :item }}
 		<label class="dials-form-section__label">
-			Adults
+			{{= item }}
 			<select class="dials-form-section__select js-dials-form-section__select">
 				<option>0</option>
 				<option>1</option>
@@ -20,10 +23,8 @@
 				<option>4</option>
 				<option>5+</option>
 			</select>
-
 		</label>
-
-
+		{{~}}		
 
 	</div>
 

@@ -15,3 +15,6 @@ https://github.com/boundround/javascript/tree/master/es5
 // [10/20/16, 10:04:48 AM] Julia Bozhkova: Да, все верно
 
 
+// Price slider
+http://www.jqueryrain.com/?vR4_oBHi
+http://ionden.com/a/plugins/ion.rangeSlider/en.html

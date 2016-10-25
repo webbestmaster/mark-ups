@@ -1,6 +1,5 @@
 .all-deals {
   background-color: $regularColorUltraLight;
-  padding-top: 45px;
   &:after {
     @extend .clear-self:after;
   }

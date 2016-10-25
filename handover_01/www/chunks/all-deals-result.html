@@ -2,6 +2,26 @@
 
 	<h3 class="deals-result__counter">108 deals</h3>
 
+	{{ for (var i = 0; i < 10; i += 1) { }}
 
+	<a href="#" class="deals-result-card">
+
+		<img src="img/featured-deals/all-deals-photo-result.jpg" alt="" class="deals-result-card__photo">
+
+		<p class="deals-result-card__cost">From $1399
+			<img src="i/family-deals/night.png" alt="" class="family-deals-card__included-icon">
+			8 nights
+		</p>
+
+		<h4 class="deals-result-card__header">Seminyak's Sky High Sensation</h4>
+		<div class="deals-result-card__tags-holder">
+			<span class="deals-result-card__tag">Luxury</span>
+			<span class="deals-result-card__tag">For teens</span>
+			<span class="deals-result-card__tag">Tag</span>
+		</div>
+		<p class="deals-result-card__offer-ends">Offer ends 09/12/2016</p>
+	</a>
+
+	{{ }; }}
 
 </div>

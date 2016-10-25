@@ -29,8 +29,8 @@
     
     win.addEventListener('load', function () {
         bindScrollToNode();
-        $( ".js-dials-form-section__select" ).selectmenu();
-        $( ".js-dials-form-section__checkboxradio" ).checkboxradio();
+        $( ".js-deals-form-section__select" ).selectmenu();
+        $( ".js-deals-form-section__checkboxradio" ).checkboxradio();
     }, false);
 
 }(window, window.document));

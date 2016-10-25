@@ -1,0 +1,13 @@
+.all-deals {
+  background-color: $regularColorUltraLight;
+  padding-top: 45px;
+  &:after {
+    @extend .clear-self:after;
+  }
+}
+
+.all-deals__main-holder {
+  width: 1170px;
+  margin: 0 auto;
+}
+

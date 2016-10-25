@@ -16,20 +16,23 @@
 
 {{= dot.template(it.chunks['featured-deals.html'])({}) }}
 
-<div class="all-dials">
+<div class="all-deals">
 
-	{{= dot.template(it.chunks['all-dials-form.html'])({
+	<div class="all-deals__main-holder">
+
+	{{= dot.template(it.chunks['all-deals-form.html'])({
 		chunks: it.chunks
 	}) }}
 
-	{{= dot.template(it.chunks['all-dials-result.html'])({
+	{{= dot.template(it.chunks['all-deals-result.html'])({
 		chunks: it.chunks
 	}) }}
 
-	{{= dot.template(it.chunks['all-dials-pagination.html'])({
+	{{= dot.template(it.chunks['all-deals-pagination.html'])({
 		chunks: it.chunks
 	}) }}
 
+	</div>
 
 </div>
 

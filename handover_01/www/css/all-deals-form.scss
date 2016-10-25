@@ -1,34 +1,33 @@
-.all-dials-form {
-  display: block;
+.all-deals-form {
   width: 250px;
-  margin: 0 340px;
+  float: left;
 }
 
-.all-dials-form__header {
+.all-deals-form__header {
   color: $regularColorLight;
   font-size: 40px;
   padding-bottom: 33px;
 }
 
-.dials-form-section__reset-all {
+.deals-form-section__reset-all {
   font-size: 14px;
   margin-top: 23px;
   float: right;
   text-decoration: underline;
 }
 
-.dials-form-section {
+.deals-form-section {
   padding-bottom: 16px;
 }
 
-.dials-form-section__header {
+.deals-form-section__header {
   color: $regularColorLight;
   font-size: 18px;
   text-transform: uppercase;
   padding-bottom: 22px;
 }
 
-.dials-form-section__reset-section {
+.deals-form-section__reset-section {
   cursor: pointer;
   background-image: url(../i/point-card/cross.svg);
   background-repeat: no-repeat;
@@ -43,14 +42,14 @@
   right: -5px;
 }
 
-.dials-form-section__select,
-.dials-form-section__checkboxradio {
+.deals-form-section__select,
+.deals-form-section__checkboxradio {
   float: right;
 }
 
 /* override jq css */
 /* I hate override jq's styles!!! F*****CK!!! */
-.dials-form-section__label {
+.deals-form-section__label {
 
   text-indent: 4px;
   font-size: 16px;

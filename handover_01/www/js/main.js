@@ -29,14 +29,16 @@
 
     win.addEventListener('load', function() {
         bindScrollToNode();
-        $(".js-deals-form-section__select").selectmenu();
-        $(".js-deals-form-section__checkboxradio").checkboxradio();
+        $('.js-deals-form-section__select').selectmenu();
+        $('.js-deals-form-section__checkboxradio').checkboxradio();
 
-        $("#range_25").ionRangeSlider({
-            type: "double",
+        $('.js-irs-range-input').ionRangeSlider({
+            type: 'double',
             min: 1000,
-            max: 2000,
-            grid: false
+            max: 2700,
+            to: 2000,
+            force_edges: true,
+            prefix: '$'
         });
 
     }, false);

@@ -171,10 +171,58 @@
   padding-bottom: 2px;
 }
 
+/* override ion.rangeSlider.css */
+/* I hate override css :( */
+.irs-bar {
+  background-image: none;
+  background-color: $regularColor;
+  height: 5px;
+  border: none;
+}
 
+.irs-line {
+  display: block;
+  height: 5px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-image: none;
+  background-color: $adsBorderColor;
+  overflow: hidden;
+} 
 
+.irs-slider {
+  &.to,
+  &.from {
+    display: block;
+    width: 5px;
+    box-shadow: none;
+    border: none;
+    background-color: $regularColor;
+    background-image: none;
+    border-radius: 0;
+    height: 15px;
+    margin-top: 3px;
+  }
+}
 
+.irs-from,
+.irs-to,
+.irs-single {
+  background-color: transparent;
+  font-weight: bold;
+  padding: 1px;  
+  color: $regularColor;
+}
 
+.irs-min,
+.irs-max {
+  display: none;
+}
+
+.irs-range-input {
+  display: none;
+}
 
 
 

@@ -3,20 +3,28 @@
 <head>
     {{ var dot = it.dot, chunks = it.chunks; }}
     {{= dot.template(chunks['head.html'])({}) }}
-    <title>single deal</title>
+    <title>deal</title>
 </head>
 <body>
 
 {{= it.chunks['header-menu.html'] }}
 
-<h1>SS</h1>
-<h1>SS</h1>
-<h1>SS</h1>
-<h1>SS</h1>
-<h1>SS</h1>
-<h1>SS</h1>
-<h1>SS</h1>
-<h1>SS</h1>
+{{= it.chunks['deal-header.html'] }}
+
+{{= it.chunks['deal-promo-photo.html'] }}
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="height: 1500px"></div>
 
 {{= it.chunks['footer.html'] }}
 

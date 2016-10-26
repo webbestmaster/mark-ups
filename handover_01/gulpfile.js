@@ -133,9 +133,9 @@ gulp.task('tiny-png', function () {
 gulp.task('webserver', function() {
     gulp.src('./dist/')
         .pipe(server({
-            livereload: true,
-            directoryListing: true,
-            open: true,
+            livereload: false,
+            directoryListing: false,
+            open: false,
             host: '0.0.0.0',
             port: 8080,
             log: 'debug'

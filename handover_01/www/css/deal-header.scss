@@ -1,0 +1,80 @@
+.deal-header {
+	@extend .regular-wrapper;
+	text-align: left;
+	padding-top: 144px;
+	padding-bottom: 57px;
+	&:after {
+		@extend .clear-self:after;
+	}
+}
+
+.deal-header__tags-holder {
+	padding-bottom: 20px;
+	&:after {
+		@extend .clear-self:after;
+	}
+}
+
+.deal-header__tag {
+	@extend .region-things-to-do-card__theme-mark;
+    display: inline-block;
+    margin-right: 10px;
+    position: static;
+}
+
+.deal-header__point-name {
+	font-size: 80px;
+	font-weight: bold;
+	padding-bottom: 30px;
+}
+
+.deal-header__point-short-description {
+	font-size: 18px;
+	line-height: 26px;
+	padding-bottom: 23px;
+}
+
+.deal-header__view-options {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $showHideArrow;
+	text-decoration: none;
+	background-image: url(../i/deal/arrow-orange-bottom.png);
+    background-repeat: no-repeat;
+    padding-right: 24px;
+    background-position: right 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

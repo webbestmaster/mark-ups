@@ -1,4 +1,4 @@
-(function (win, doc) {
+(function(win, doc) {
 
     'use strict';
 
@@ -26,11 +26,19 @@
         }
 
     }
-    
-    win.addEventListener('load', function () {
+
+    win.addEventListener('load', function() {
         bindScrollToNode();
-        $( ".js-deals-form-section__select" ).selectmenu();
-        $( ".js-deals-form-section__checkboxradio" ).checkboxradio();
+        $(".js-deals-form-section__select").selectmenu();
+        $(".js-deals-form-section__checkboxradio").checkboxradio();
+
+        $("#range_25").ionRangeSlider({
+            type: "double",
+            min: 1000,
+            max: 2000,
+            grid: false
+        });
+
     }, false);
 
 }(window, window.document));

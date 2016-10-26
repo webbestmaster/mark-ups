@@ -16,5 +16,5 @@ https://github.com/boundround/javascript/tree/master/es5
 
 
 // Price slider
-http://www.jqueryrain.com/?vR4_oBHi
-http://ionden.com/a/plugins/ion.rangeSlider/en.html
+// site http://ionden.com/a/plugins/ion.rangeSlider/en.html
+// git https://github.com/IonDen/ion.rangeSlider

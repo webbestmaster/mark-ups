@@ -15,8 +15,10 @@
 
 {{= dot.template(it.chunks['deal-promo-media.html'])({}) }}
 
-{{= dot.template(it.chunks['deal-options.html'])({}) }}
-
+<div class="deal-wrapper">
+	{{= dot.template(it.chunks['deal-options.html'])({}) }}
+	{{= dot.template(it.chunks['deal-data.html'])({}) }}
+</div>
 
 <div style="height: 1500px"></div>
 

@@ -1,13 +1,42 @@
 .deal-options {
 	float: left;
+	padding: 14px 0 0 338px;
+	&:after {
+		@extend .clear-self:after;
+	}
 }
 
 .deal-options__main-header {
 	font-size: 18px;
+	color: $regularColorLight;
+	text-transform: uppercase;
+}
+
+.deal-options__main-header-text-icon {
+	width: 26px;
+    height: 26px;
+    position: relative;
+    top: 6px;
+}
+
+.deal-option {
+    margin: 24px 0 40px 4px;
 }
 
 .deal-option__head-line {
 	font-size: 26px;
+	background-color: $regularColorUltraLight;
+    padding: 20px 26px 11px;
+	color: $regularColorLight;
+    position: relative;
+    z-index: 1;
+}
+
+.deal-option-card {
+	padding: 25px;
+	width: 320px;
+	position: relative;
+	@extend .card-shadow;
 }
 
 .deal-option-card__cost {
@@ -15,17 +44,49 @@
 }
 
 .deal-option-card__buy-now {
+	color: #fff;
 	font-size: 24px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 27px;
+    top: 30px;
+    background-color: $showHideArrow;
+    border-radius: 6px;
+    padding: 16px 20px;
 }
 
 .deal-option-card__valued-up {
 	font-size: 14px;
+	color: $regularColorLight;
+    display: block;
+    padding-bottom: 27px;
+}
+
+.deal-option-card-short-info__icon {
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    left: -5px;
+    top: -6px;
 }
 
 .deal-option-card__short-info {
 	font-size: 16px;
+	position: relative;
+	padding: 0 0 7px 33px;
 }
 
 .deal-option-card__descriptions {
-	font-size: 16px;
+    font-size: 16px;
+    padding-top: 15px;
+    line-height: 20px;
 }
+
+.deal-option-card__descriptions--bold {
+	font-weight: bold;
+}
+
+
+
+
+

@@ -1,3 +1,12 @@
+.deal-wrapper {
+    width: 1180px;
+    margin: 0 auto;
+    padding-bottom: 124px;
+	&:after {
+		@extend .clear-self:after;
+	}
+}
+
 .deal-options {
 	float: left;
 	padding: 14px 0 0 0;

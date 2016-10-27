@@ -5,7 +5,6 @@
 	<div class="deal-data-card">
 		<span class="deal-data-card__switcher"></span>
 		<h2 class="deal-data-card__header">Highlights</h2>
-		<div class="deal-data-card__info-block"></div>
 	</div>
 
 	<div class="deal-data-card">
@@ -29,23 +28,39 @@
 				<li class="deal-data-card__list-item">Find something else more interesting stares at human while pushing stuff off a table yet rub face on owner leave fur on owners clothes purr while eating walk on car leaving trail of paw prints on hood and windshield, where is my slave? I'm getting hungry.</li>
 			</ul>
 
+			<div class="deal-data-review__holder">
+
+				{{~ [1,2,3] :item }}
+				
+					<div class="deal-data-review">
+						<img src="img/stories/stories-author.jpg" alt="" class="deal-data-review__author-avatar">
+						<p class="deal-data-review__author-name">Alex</p>
+						<p class="deal-data-review__review">Damn that dog under the bed. Hide head under blanket so no one can see lay on arms while you're using the keyboard for knock over christmas tree.</p>
+						<div class="deal-data-review__rating">
+							<span class="deal-data-review__rating-item deal-data-review__rating-item-positive"></span>
+							<span class="deal-data-review__rating-item deal-data-review__rating-item-positive"></span>
+							<span class="deal-data-review__rating-item deal-data-review__rating-item-negative"></span>
+							<span class="deal-data-review__rating-item deal-data-review__rating-item-negative"></span>
+							<span class="deal-data-review__rating-item deal-data-review__rating-item-negative"></span>
+						</div>
+						<span class="deal-data-review__date">July 2015</span>
+					</div>	
+
+				{{~}}
+
+			</div>
+
+
 		</div>
-
-
 
 	</div>
 
-
-
-	{{ var list = ['sss', 'sss', 'sss', 'sss', 'sss', 'sss']; }}
-	{{~ list :item }}
+	{{~ ['Booking Guarantee', 'Facilities', 'Reviews', 'Fine Print'] :item }}
 	<div class="deal-data-card">
 		<span class="deal-data-card__switcher"></span>
 		<h2 class="deal-data-card__header">{{= item }}</h2>
-		<div class="deal-data-card__info-block"></div>
 	</div>
 	{{~}}
-
 
 </div>
 

@@ -12,7 +12,7 @@
 }
 
 .region-things-to-do__card-holder {
-  width: 1200px;
+  width: $desctopWidth;
   margin: 0 auto;
   &:after {
     @extend .clear-self:after;

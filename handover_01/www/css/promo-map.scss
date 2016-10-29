@@ -115,3 +115,14 @@
   font-size: 22px;
 }
 
+
+@media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
+
+  .promo-map {
+    display: none;
+  }
+
+}
+
+
+

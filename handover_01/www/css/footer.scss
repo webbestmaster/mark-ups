@@ -5,6 +5,9 @@
   .regular-wrapper {
     height: 100%;
   }
+  &:after {
+    @extend .clear-self:after;
+  }
 }
 
 .footer__logo {
@@ -21,6 +24,9 @@
 
 .footer__links-holder {
   padding-top: 27px;
+  &:after {
+    @extend .clear-self:after;
+  }
 }
 
 .footer__link {
@@ -35,3 +41,39 @@
   bottom: 39px;
   font-size: 16px;
 }
+
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
+
+  .footer {
+    height: auto;
+  }
+
+  .footer__links-holder {
+    padding-top: 14px;
+    padding-bottom: 43px;
+  }
+
+  .footer__copyright {
+    bottom: 10px;
+    left: 15px;
+    font-size: 14px;
+  }
+
+  .footer__logo {
+    background-size: contain;
+    width: 85px;
+    background-repeat: no-repeat;
+    top: 22px;
+    right: 18px;
+    left: auto;
+  }
+
+  .footer__link {
+    float: left;
+    clear: left;
+    font-size: 16px;
+    padding: 3px 15px;
+  }
+
+}
+

@@ -7,14 +7,12 @@
 </head>
 <body>
 
-{{= it.chunks['header-menu.html'] }}
-
+    {{= it.chunks['header-menu.html'] }}
 
 	{{= dot.template(it.chunks['promo-header.html'])({
 	    image: 'img/promo-header/region-promo-header.jpg',
 	    text: 'East Asia'
 	}) }}
-
 
 	{{= it.chunks['local-navigation.html'] }}
 
@@ -36,18 +34,7 @@
 
 	{{= dot.template(it.chunks['did-you-know.html'])({}) }}
 
-<div style="height: 4000px"></div>
-
-<div style="display: none;">
-
-
-
-
-
-
-	{{= it.chunks['footer.html'] }}
-
-</div>
+    {{= it.chunks['footer.html'] }}
 
 </body>
 </html>

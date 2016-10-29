@@ -11,7 +11,7 @@
 }
 
 .family-deals__card-holder {
-  width: $desctopWidth;
+  width: $desktopWidth;
   margin: 0 auto;
   &:after {
     @extend .clear-self:after;
@@ -132,7 +132,7 @@
   width: 100%;
 }
 
-@media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
   .family-deals-card {
     margin: 5px;

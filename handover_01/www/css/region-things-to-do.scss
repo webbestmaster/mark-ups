@@ -12,7 +12,7 @@
 }
 
 .region-things-to-do__card-holder {
-  width: $desctopWidth;
+  width: $desktopWidth;
   margin: 0 auto;
   &:after {
     @extend .clear-self:after;
@@ -104,7 +104,7 @@
   background-color: $regularColorUltraLight;
 }
 
-@media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
   .region-things-to-do-card--ad {
     padding-left: 0;

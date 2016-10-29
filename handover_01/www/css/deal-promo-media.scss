@@ -10,7 +10,7 @@
   @extend .regular-wrapper;
   padding: 0;
   text-align: left;
-  width: $desctopWidth;
+  width: $desktopWidth;
   padding-bottom: 22px;
   &:after {
     @extend .clear-self:after;

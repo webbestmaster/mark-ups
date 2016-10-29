@@ -1,23 +1,31 @@
 <div class="did-you-know js-did-you-know">
 
-    <h3 class="places-to-go__header">Did you know?</h3>
 
-    <div class="horizontal-slider__arrows-holder">
-        <div class="horizontal-slider__right-arrow"></div>
-        <div class="horizontal-slider__left-arrow horizontal-slider__arrow--disable"></div>
-    </div>
+    <div class="horizontal-slider__slides-holder swiper-container horizontal-scroll js-double-horizontal-scroll--centered-slides">
+        <h3 class="places-to-go__header">Did you know?</h3>
 
-    <div class="horizontal-slider__slides-holder">
-
-        <div class="horizontal-slider__slide">
-            <img src="img/did-you-know/did-you-know-photo-1.jpg" class="horizontal-slider-slide__photo" alt="">
-            <p class="horizontal-slider-slide__paragraph">The Sydney Fish Market is the largest fish market in Australia and the third largest in the world!</p>
+        <div class="horizontal-slider__arrows-holder">
+            <div class="horizontal-slider__right-arrow"></div>
+            <div class="horizontal-slider__left-arrow"></div>
         </div>
 
-        <div class="horizontal-slider__slide">
-            <img src="img/did-you-know/did-you-know-photo-2.jpg" class="horizontal-slider-slide__photo" alt="">
-            <p class="horizontal-slider-slide__paragraph">The ferries on Sydney Harbour carry over 14 million passengers every year.</p>
+        <div class="swiper-wrapper">
+
+            {{~ [1, 2, 3] :item }}
+            <div class="horizontal-slider__slide swiper-slide">
+                <img src="img/did-you-know/did-you-know-photo-1.jpg" class="horizontal-slider-slide__photo" alt="">
+                <p class="horizontal-slider-slide__paragraph">The Sydney Fish Market is the largest fish market in Australia and the third largest in the world!</p>
+            </div>
+
+            <div class="horizontal-slider__slide swiper-slide">
+                <img src="img/did-you-know/did-you-know-photo-2.jpg" class="horizontal-slider-slide__photo" alt="">
+                <p class="horizontal-slider-slide__paragraph">The ferries on Sydney Harbour carry over 14 million passengers every year.</p>
+            </div>
+            {{~}}
+
         </div>
+
+        <div class="swiper-scrollbar"></div>
 
     </div>
 

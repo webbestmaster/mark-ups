@@ -11,16 +11,10 @@
 }
 
 .promo-text__read-more {
-  color: $regularColorLight;
-  display: inline-block;
-  margin: 0 auto;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 15px;
-  padding: 25px;
+  @extend .places-to-go__load-more;
 }
 
-@media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
   .promo-text {
     padding-bottom: 8px;

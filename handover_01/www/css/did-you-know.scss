@@ -1,6 +1,7 @@
 
 .did-you-know {
   @extend .regular-wrapper;
+  width: $desktopWidth;
   padding-bottom: 99px;
 }
 
@@ -18,4 +19,22 @@
   padding: 12px 37px 0 10px;
 }
 
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
+  .did-you-know {
+    width: auto;
+  }
+
+  .horizontal-slider-slide__paragraph {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 30px 10px 10px;
+  }
+
+  .horizontal-slider-slide__photo {
+    width: 107px;
+    height: 107px;
+    margin: 0 12px 5px 0;
+  }
+
+}

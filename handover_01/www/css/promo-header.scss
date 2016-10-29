@@ -35,4 +35,15 @@
 }
 
 
+@media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
+  
+  .promo-header__header {
+    font-size: 47px;
+    top: 53%;
+  }
+  .promo-header {
+    height: 420px;
+  }
+
+}
 

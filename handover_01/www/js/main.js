@@ -1,7 +1,5 @@
 (function(win, doc) {
 
-    win.bestApp = win.bestApp || {};
-
     'use strict';
 
     function bindScrollToNode() {
@@ -41,16 +39,6 @@
             force_edges: true,
             prefix: '$'
         });
-
-        var swiper = new Swiper('.js-horizontal-scroll', {
-            scrollbar: '.swiper-scrollbar',
-            scrollbarHide: true,
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            grabCursor: false,
-            preventClicks: false
-        });
-
 
     }, false);
 

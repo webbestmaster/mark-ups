@@ -9,6 +9,7 @@
   .swiper-slide {
     display: inline-block;
   }
+
 }
 
 .local-navigation__link {
@@ -29,15 +30,7 @@
 @media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
   
   .local-navigation {
-    width: 100%;
-    overflow: hidden;
     margin-bottom: 9px;
-    .swiper-wrapper {
-      display: flex;
-    }
-    .swiper-slide {
-      float: left;
-    }
   }
 
 }

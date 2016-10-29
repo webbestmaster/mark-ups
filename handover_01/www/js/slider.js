@@ -1,51 +1,64 @@
 (function(win, doc) {
 
-	win.bestApp = win.bestApp || {};
-
 	var desctopWidth = 1200;
 
-	function SliderMasrer() {
+	var swipers;
 
+	var cfg = {
+		normal: {
+	        scrollbar: '.swiper-scrollbar',
+	        scrollbarHide: true,
+	        slidesPerView: 'auto',
+	        spaceBetween: 0,
+	        grabCursor: false,
+	        preventClicks: false
+    	},
+    	centered: {
+            scrollbar: '.swiper-scrollbar',
+	        scrollbarHide: true,
+	        slidesPerView: 'auto',
+	        spaceBetween: 0,
+	        grabCursor: false,
+	        preventClicks: false,
+	        centeredSlides: true // diff of normal
+    	}
+	};
 
-	}
+	function init() {
 
-	SliderMasrer.prototype.bindEventListeners = function () {
+		destroy();
 
-		$(window).on('resize', this.onRsize);
-
-	} 
-
-	SliderMasrer.prototype.initialize = function (selectors) {
-
-		selectors.forEach(this.initializeSelector, this);
-
-	}
-
-	SliderMasrer.prototype.initializeSelector = function(selector) {
-
-		var nodes = $('selector');
-
-		nodes.each(function() {
-			var node = $(this);
-		});
-
-
-	} 	
-
-	SliderMasrer.prototype.onRsize = function() {
-
-		var width = doc.documentElement.clientWidth;
-
-		if (width < desctopWidth) {
-			// init sliders
-		} else {
-			// destroy sliders
+		if (doc.documentElement.clientWidth >= desctopWidth) {
+			return;
 		}
 
+		var nodes = $('.js-horizontal-scroll, .js-horizontal-scroll--centered-slides');
 
+		nodes.each(function() {
+			var $node = $(this),
+				swiper;
 
-	} 	
+			if ($node.hasClass('js-horizontal-scroll')) {
+				swiper = new Swiper($node, cfg.normal);
+			}
 
-	win.bestApp.SliderMasrer = SliderMasrer;
+			if ($node.hasClass('js-horizontal-scroll--centered-slides')) {
+				swiper = new Swiper($node, cfg.centered);
+			}
+
+			return swiper && swipers.push(swiper);
+
+		});
+	}
+
+	function destroy() {
+		swipers = swipers || [];
+		swipers.forEach(function(swiper) {
+			swiper.destroy(false, true);
+		});
+	}
+
+	$(window).on('load resize', init);
+
 
 }(window, window.document));

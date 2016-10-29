@@ -64,7 +64,6 @@
   z-index: -1;
 }
 
-
 .places-to-go__load-more {
   display: inline-block;
   margin: 21px auto 0;
@@ -75,6 +74,37 @@
   font-weight: bold;
   padding: 25px;
 }
+
+@media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
+  
+  .places-to-go__header {
+    font-size: 32px;    
+    padding-top: 42px;
+    padding-bottom: 25px;
+  }
+  
+  .places-to-go__load-more {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

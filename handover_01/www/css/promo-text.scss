@@ -21,9 +21,19 @@
 }
 
 @media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
+    
+    .promo-text {
+        padding-bottom: 8px;
+    }
+
     .promo-text__paragraph {
         font-size: 17px;   
         line-height: 25px;
         padding: 0 10px;
     }
+
+    .promo-text__read-more {
+        padding: 8px;
+    }
+
 }

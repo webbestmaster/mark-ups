@@ -32,11 +32,19 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.for-mobile-only {
+  display: none;
+}
+
 @media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
 
   .regular-wrapper {
     width: auto;
     padding: 0;
+  }
+
+  .for-mobile-only {
+    display: initial;
   }
 
 }

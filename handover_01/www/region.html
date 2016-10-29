@@ -32,6 +32,8 @@
 
 	{{= it.chunks['wild-ad-banner.html'] }}
 
+	{{= dot.template(it.chunks['stories.html'])({}) }}
+
 <div style="height: 4000px"></div>
 
 <div style="display: none;">
@@ -39,7 +41,6 @@
 
 
 
-	{{= dot.template(it.chunks['stories.html'])({}) }}
 
 	{{= it.chunks['did-you-know.html'] }}
 

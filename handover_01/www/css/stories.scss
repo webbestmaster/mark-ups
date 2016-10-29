@@ -3,7 +3,7 @@
   width: 515px;
   background-color: #fff;
   float: left;
-  margin: 0 15px 12px;
+  margin: 5px 15px 12px;
   @extend .card-shadow;
 }
 
@@ -53,6 +53,35 @@
 .story-card__photo {
   display: block;
   width: 100%;
+}
+
+@media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
+
+  .story-card {
+    width: 250px;
+    margin: 5px;
+    padding: 15px;
+  }
+
+  .story-card__author-nick,
+  .story-card__last-update {
+    float: none;
+    padding: 0;
+  }
+
+  .story-card__author-nick {
+    display: inline-block;
+  }
+
+  .story-card__last-update {
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .story-card__headline {
+    text-align: left;
+  }
+
 }
 
 

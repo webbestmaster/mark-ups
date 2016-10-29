@@ -10,7 +10,7 @@
   @extend .regular-wrapper;
   padding: 0;
   text-align: left;
-  width: $desktopWidth;
+  max-width: $desktopWidth;
   padding-bottom: 22px;
   &:after {
     @extend .clear-self:after;
@@ -20,7 +20,7 @@
 .deal-promo-media-card {
   position: relative;
   float: left;
-  margin: 0 14px;
+  margin: 0 10px;
 }
 
 .deal-promo-media-card__photo {

@@ -11,7 +11,7 @@
 }
 
 .places-to-go__card-holder {
-  width: $desktopWidth;
+  max-width: $desktopWidth;
   margin: 0 auto;
   &:after {
     @extend .clear-self:after;

@@ -41,7 +41,7 @@
 
 .horizontal-slider__slide {
   //float: left;
-  width: $desktopWidth / 2 - 30px;
+  max-width: $desktopWidth / 2 - 30px;
   margin: 0 15px;
   padding-bottom: 15px;
   &:after {

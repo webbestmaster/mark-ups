@@ -6,7 +6,7 @@
 }
 
 .all-deals__main-holder {
-  width: 1170px;
+  max-width: $desktopWidth - 30px;
   margin: 0 auto;
   &:after {
     @extend .clear-self:after;

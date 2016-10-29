@@ -3,6 +3,7 @@
 
 body {
   font-family: signika-light, sans-serif;
+  color: $regularColor;
 }
 
 .regular-wrapper {
@@ -11,7 +12,6 @@ body {
   padding: 0 14px;
   font-family: signika-light, sans-serif;
   font-weight: normal;
-  color: $regularColor;
   position: relative;
   clear: both;
 }

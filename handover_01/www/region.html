@@ -9,33 +9,36 @@
 
 {{= it.chunks['header-menu.html'] }}
 
-{{= dot.template(it.chunks['promo-header.html'])({
-    image: 'img/promo-header/region-promo-header.jpg',
-    text: 'East Asia'
-}) }}
+<div style="display: none;">
 
-{{= it.chunks['local-navigation.html'] }}
+	{{= dot.template(it.chunks['promo-header.html'])({
+	    image: 'img/promo-header/region-promo-header.jpg',
+	    text: 'East Asia'
+	}) }}
 
-{{= it.chunks['promo-text.html'] }}
+	{{= it.chunks['local-navigation.html'] }}
 
-{{= dot.template(it.chunks['promo-map.html'])({}) }}
+	{{= it.chunks['promo-text.html'] }}
 
-{{= it.chunks['places-to-go.html'] }}
+	{{= dot.template(it.chunks['promo-map.html'])({}) }}
 
-{{= dot.template(it.chunks['family-deals.html'])({}) }}
+	{{= it.chunks['places-to-go.html'] }}
 
-{{= dot.template(it.chunks['region-things-to-do.html'])({}) }}
+	{{= dot.template(it.chunks['family-deals.html'])({}) }}
 
-{{= dot.template(it.chunks['itineraries.html'])({}) }}
+	{{= dot.template(it.chunks['region-things-to-do.html'])({}) }}
 
-{{= it.chunks['wild-ad-banner.html'] }}
+	{{= dot.template(it.chunks['itineraries.html'])({}) }}
 
-{{= dot.template(it.chunks['stories.html'])({}) }}
+	{{= it.chunks['wild-ad-banner.html'] }}
 
-{{= it.chunks['did-you-know.html'] }}
+	{{= dot.template(it.chunks['stories.html'])({}) }}
 
-{{= it.chunks['footer.html'] }}
+	{{= it.chunks['did-you-know.html'] }}
 
+	{{= it.chunks['footer.html'] }}
+	
+</div>
 
 </body>
 </html>

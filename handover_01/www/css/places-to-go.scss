@@ -76,17 +76,17 @@
 }
 
 @media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
-  
+
   .places-to-go__card-holder {
     width: auto;
   }
 
   .places-to-go__header {
-    font-size: 32px;    
+    font-size: 32px;
     padding-top: 42px;
     padding-bottom: 25px;
   }
-  
+
   .places-to-go__load-more {
     display: none;
   }
@@ -94,6 +94,10 @@
   .places-to-go-card {
     width: 272px;
     height: 360px;
+  }
+
+  .places-to-go-card__card-name {
+    font-weight: bold;
   }
 
 }

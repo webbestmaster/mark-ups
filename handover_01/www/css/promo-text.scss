@@ -1,39 +1,39 @@
 .promo-text {
-    @extend .regular-wrapper;
-    font-family: Tahoma, sans-serif;
-    text-align: center;
-    padding-bottom: 42px;
+  @extend .regular-wrapper;
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  padding-bottom: 42px;
 }
 
 .promo-text__paragraph {
-    font-size: 22px;
-    line-height: 34px;
+  font-size: 22px;
+  line-height: 34px;
 }
 
 .promo-text__read-more {
-    color: $regularColorLight;
-    display: inline-block;
-    margin: 0 auto;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 15px;
-    padding: 25px;
+  color: $regularColorLight;
+  display: inline-block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 25px;
 }
 
 @media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
-    
-    .promo-text {
-        padding-bottom: 8px;
-    }
 
-    .promo-text__paragraph {
-        font-size: 17px;   
-        line-height: 25px;
-        padding: 0 10px;
-    }
+  .promo-text {
+    padding-bottom: 8px;
+  }
 
-    .promo-text__read-more {
-        padding: 20px;
-    }
+  .promo-text__paragraph {
+    font-size: 17px;
+    line-height: 25px;
+    padding: 0 10px;
+  }
+
+  .promo-text__read-more {
+    padding: 20px;
+  }
 
 }

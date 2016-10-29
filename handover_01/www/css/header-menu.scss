@@ -61,14 +61,12 @@
   padding-left: 39px;
 }
 
-
 .header-menu__link--join {
   border: 2px solid #6ab8c5;
   padding: 5px 24px 4px 22px;
   float: right;
   border-radius: 6px;
 }
-
 
 .header-search {
   float: left;
@@ -91,7 +89,7 @@
 }
 
 @media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
-  
+
   .header-menu-mobile {
     display: block;
     background-image: url(../i/header-menu/header-bg.png);
@@ -116,7 +114,7 @@
     margin-left: 8px;
     background-position: 0 -5px;
   }
-  
+
   .header-menu-mobile__menu {
     float: right;
     background-image: url(../i/header-menu/mobile-menu-button.png);
@@ -134,7 +132,7 @@
     width: 46px;
     height: 46px;
   }
-  
+
   .header-menu-mobile__login {
     float: right;
     text-decoration: none;

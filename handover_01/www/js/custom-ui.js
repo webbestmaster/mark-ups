@@ -1,8 +1,8 @@
-(function(win, doc) {
+(function (win) {
 
     'use strict';
 
-    $(win).on('load', function() {
+    $(win).on('load', function () {
 
         $('.js-deals-form-section__select').selectmenu(); // custom dropdown
         $('.js-deals-form-section__checkboxradio').checkboxradio(); // custom checkbox

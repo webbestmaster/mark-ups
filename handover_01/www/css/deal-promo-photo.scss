@@ -1,39 +1,39 @@
 .deal-promo-photo {
-    position: relative;
-    height: 680px;
-    overflow: hidden;
-    max-width: 1680px;
-    margin: 0 auto;
-    padding-bottom: 41px;
+  position: relative;
+  height: 680px;
+  overflow: hidden;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding-bottom: 41px;
 }
 
 .deal-promo-photo__photo {
-	position: absolute;
-	z-index: 0;
-	left: 50%;
-	top: 0;
-	transform: translate3d(-50%, 0, 0); 
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 0;
+  transform: translate3d(-50%, 0, 0);
 }
 
 .deal-promo-photo__head-line {
-    font-size: 40px;
-    background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    z-index: 1;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    padding: 33px 0 49px;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 33px 0 49px;
 }
 
 .deal-promo-photo__head-line-icon {
-	display: inline-block;
-    width: 59px;
-    height: 48px;
-    background-image: url(../i/deal/deal-photo-head-line-icon.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    top: 9px;
-    margin-right: 13px;
+  display: inline-block;
+  width: 59px;
+  height: 48px;
+  background-image: url(../i/deal/deal-photo-head-line-icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 9px;
+  margin-right: 13px;
 }

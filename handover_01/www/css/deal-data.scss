@@ -1,161 +1,161 @@
 .deal-data {
-    float: right;
-    width: 770px;
-	&:after {
-		@extend .clear-self:after;
-	}
+  float: right;
+  width: 770px;
+  &:after {
+    @extend .clear-self:after;
+  }
 }
 
 .deal-data__map {
-	display: block;
-	padding-bottom: 10px;
+  display: block;
+  padding-bottom: 10px;
 }
 
 .deal-data-card {
-	display: block;
-	position: relative;
-	border-bottom: 1px solid $adsBorderColor;
+  display: block;
+  position: relative;
+  border-bottom: 1px solid $adsBorderColor;
 }
 
 .deal-data-card__switcher {
-    top: 27px;
-    right: 4px;
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	background-image: url(../i/arrows/accordion_arrow_big_down_gray.svg);
+  top: 27px;
+  right: 4px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(../i/arrows/accordion_arrow_big_down_gray.svg);
 }
 
 .deal-data-card__switcher--open {
-	background-image: url(../i/arrows/accordion_arrow_big_down_orange.svg);
+  background-image: url(../i/arrows/accordion_arrow_big_down_orange.svg);
 }
 
 .deal-data-card__header {
-	display: block;
-	font-size: 40px;
-    padding: 22px 0;
-    color: $regularColorLight;	
+  display: block;
+  font-size: 40px;
+  padding: 22px 0;
+  color: $regularColorLight;
 }
 
 .deal-data-card__header--open {
-	color: $showHideArrow;
+  color: $showHideArrow;
 }
 
 .deal-data-card__info-block {
-	display: block;
+  display: block;
 }
 
 .deal-data-card__subheading {
-	font-size: 26px;
-    padding-bottom: 11px;
+  font-size: 26px;
+  padding-bottom: 11px;
 }
 
 .deal-data-card__paragraph {
-	font-size: 18px;
-    line-height: 26px;
-    padding-bottom: 22px;
+  font-size: 18px;
+  line-height: 26px;
+  padding-bottom: 22px;
 }
 
 .deal-data__big-video {
-	display: block;
-	padding-bottom: 20px;
+  display: block;
+  padding-bottom: 20px;
 }
 
 .deal-data-card__list {
-    padding-left: 36px;
-    margin: 0;
+  padding-left: 36px;
+  margin: 0;
 }
 
 .deal-data-card__list-item {
-	@extend .deal-data-card__paragraph;
-	line-height: 26px;
-	display: block;
-	padding-bottom: 2px;
-	list-style-type: none;
-	position: relative;
+  @extend .deal-data-card__paragraph;
+  line-height: 26px;
+  display: block;
+  padding-bottom: 2px;
+  list-style-type: none;
+  position: relative;
 }
 
 .deal-data-card__list-item:before {
-    content: '.';
-    display: block;
-    position: absolute;
-    left: -34px;
-    top: -4px;
+  content: '.';
+  display: block;
+  position: absolute;
+  left: -34px;
+  top: -4px;
 }
 
 .deal-data-review__holder {
-	padding-top: 50px;
-	padding-bottom: 4px;
-	&:after {
-		@extend .clear-self:after;
-	}
+  padding-top: 50px;
+  padding-bottom: 4px;
+  &:after {
+    @extend .clear-self:after;
+  }
 }
 
 .deal-data-review {
-	padding: 21px 23px;
-	width: 322px;
-	margin: 0 32px 32px 0;
-	float: left;
-	@extend .card-shadow;
+  padding: 21px 23px;
+  width: 322px;
+  margin: 0 32px 32px 0;
+  float: left;
+  @extend .card-shadow;
 }
 
 .deal-data-review__holder .deal-data-review:nth-child(even) {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 .deal-data-review__author-avatar {
-    float: left;
-    border-radius: 20px;
-    margin-right: 8px;
-    margin-bottom: 25px;
+  float: left;
+  border-radius: 20px;
+  margin-right: 8px;
+  margin-bottom: 25px;
 }
 
 .deal-data-review__author-name {
-	font-size: 18px;
-	color: $regularColorLighter;
-    font-weight: bold;
-    padding-top: 10px;
+  font-size: 18px;
+  color: $regularColorLighter;
+  font-weight: bold;
+  padding-top: 10px;
 }
 
 .deal-data-review__review {
-    clear: both;
-    font-size: 18px;
-    line-height: 21px;
-    padding-bottom: 30px;
+  clear: both;
+  font-size: 18px;
+  line-height: 21px;
+  padding-bottom: 30px;
 }
 
 .deal-data-review__date {
-	display: block;
-	font-size: 16px;
-	color: $regularColorLighter;
+  display: block;
+  font-size: 16px;
+  color: $regularColorLighter;
 }
 
 .deal-data-review__rating {
-    padding-bottom: 11px;
-	&:after {
-		@extend .clear-self:after;
-	}
+  padding-bottom: 11px;
+  &:after {
+    @extend .clear-self:after;
+  }
 }
 
 .deal-data-review__rating-item {
-	float: left;
-	width: 36px;
-	height: 36px;
-	margin-right: 7px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+  float: left;
+  width: 36px;
+  height: 36px;
+  margin-right: 7px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .deal-data-review__rating-item-positive {
-	background-image: url(../i/deal/smile-orange.png);
+  background-image: url(../i/deal/smile-orange.png);
 }
 
 .deal-data-review__rating-item-negative {
-	background-image: url(../i/deal/smile-gray.png);
+  background-image: url(../i/deal/smile-gray.png);
 }
 
 

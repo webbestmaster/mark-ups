@@ -1,4 +1,3 @@
-
 /* begin - style css */
 
 body {
@@ -17,7 +16,7 @@ body {
 }
 
 .regular-wrapper__ta-c {
-  text-align: center;  
+  text-align: center;
 }
 
 .clear-self {
@@ -34,14 +33,12 @@ body {
 }
 
 @media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
-  
+
   .regular-wrapper {
     width: auto;
     padding: 0;
   }
 
 }
-
-
 
 /* end - style css */

@@ -1,8 +1,10 @@
 .scroll-area {
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 .scroll-area__content {
-    display: block;
-    &:after { @extend .clear-self:after; }
+  display: block;
+  &:after {
+    @extend .clear-self:after;
+  }
 }

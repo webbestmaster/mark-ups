@@ -2,33 +2,36 @@
 
     <h3 class="region-things-to-do__header">Things to do in East Asia</h3>
 
-    <div class="region-things-to-do__card-holder">
+    <div class="region-things-to-do__card-holder swiper-container horizontal-scroll js-horizontal-scroll--centered-slides">
 
-        {{~ [1, 2, 3, 4, 5, 6] :item }}
+        <div class="swiper-wrapper">
 
-            {{? item === 3}}
+            {{~ [1, 2, 3, 4, 5, 6] :item }}
 
-                <div class="region-things-to-do-card region-things-to-do-card--ad">
-                    <img src="img/region-things-to-do/region-things-to-do-ad.jpg" alt="" class="region-things-to-do-card-ad__img">
-                    <p class="region-things-to-do-card-ad__paragraph">Sponsored</p>
-                </div>
+                {{? item === 3}}
 
-            {{??}}
-
-                <div class="region-things-to-do-card">
-                    <div class="region-things-to-do-card__headline">
-                        <div class="region-things-to-do-card__cost">$$</div>
-                        <div class="region-things-to-do-card__book">book</div>
+                    <div class="region-things-to-do-card region-things-to-do-card--ad swiper-slide">
+                        <img src="img/region-things-to-do/region-things-to-do-ad.jpg" alt="" class="region-things-to-do-card-ad__img">
+                        <p class="region-things-to-do-card-ad__paragraph">Sponsored</p>
                     </div>
-                    <img src="img/region-things-to-do/region-things-to-do-photo.jpg" alt="" class="region-things-to-do-card__point-photo">
-                    <h3 class="region-things-to-do-card__header">Lotte World</h3>
-                    <span class="region-things-to-do-card__theme-mark">Theme mark</span>
-                </div>
 
-            {{?}}
+                {{??}}
 
-        {{~}}
+                    <div class="region-things-to-do-card swiper-slide">
+                        <div class="region-things-to-do-card__headline">
+                            <div class="region-things-to-do-card__cost">$$</div>
+                            <div class="region-things-to-do-card__book">book</div>
+                        </div>
+                        <img src="img/region-things-to-do/region-things-to-do-photo.jpg" alt="" class="region-things-to-do-card__point-photo">
+                        <h3 class="region-things-to-do-card__header">Lotte World</h3>
+                        <span class="region-things-to-do-card__theme-mark">Theme mark</span>
+                    </div>
 
+                {{?}}
+
+            {{~}}
+
+        </div>
     </div>
 
     <a class="region-things-to-do-card__load-more" href="#">load more</a>

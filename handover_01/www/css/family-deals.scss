@@ -24,7 +24,7 @@
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 0 15px;
+  margin: 5px 15px;
   transform: translate3d(0, 0, 0);
   @extend .card-shadow;
 }
@@ -133,7 +133,12 @@
 }
 
 
+@media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
 
+  .family-deals-card {
+    margin: 5px;
+  }
+}
 
 
 

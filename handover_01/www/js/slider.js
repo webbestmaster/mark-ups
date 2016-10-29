@@ -2,7 +2,9 @@
 
 	var desctopWidth = 1200;
 
-	var swipers;
+	var swipers = [];
+
+	var prevState;
 
 	var cfg = {
 		normal: {
@@ -26,39 +28,43 @@
 
 	function init() {
 
-		destroy();
+		var curState = doc.documentElement.clientWidth >= desctopWidth ? 'desctop' : 'mobile';
 
-		if (doc.documentElement.clientWidth >= desctopWidth) {
+		if (prevState === curState) { // do not anything if state is equal
+			return;
+		}
+
+		prevState = curState;
+
+		if (curState === 'desctop') {
+			destroy();
 			return;
 		}
 
 		var nodes = $('.js-horizontal-scroll, .js-horizontal-scroll--centered-slides');
 
-		nodes.each(function() {
-			var $node = $(this),
-				swiper;
+		swipers = Array.prototype.map.call(nodes, function(node){
+			
+			var $node = $(node);
 
 			if ($node.hasClass('js-horizontal-scroll')) {
-				swiper = new Swiper($node, cfg.normal);
+				return new Swiper($node, cfg.normal);
 			}
 
 			if ($node.hasClass('js-horizontal-scroll--centered-slides')) {
-				swiper = new Swiper($node, cfg.centered);
+				return new Swiper($node, cfg.centered);
 			}
-
-			return swiper && swipers.push(swiper);
-
+		
 		});
+
 	}
 
 	function destroy() {
-		swipers = swipers || [];
 		swipers.forEach(function(swiper) {
 			swiper.destroy(false, true);
 		});
 	}
 
 	$(window).on('load resize', init);
-
 
 }(window, window.document));

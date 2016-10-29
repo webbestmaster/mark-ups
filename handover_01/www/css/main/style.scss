@@ -34,10 +34,12 @@ body {
 }
 
 @media only screen and (max-width: $desctopWidth) { /* $desctopMediaWidth */
+  
   .regular-wrapper {
     width: auto;
     padding: 0;
   }
+
 }
 
 

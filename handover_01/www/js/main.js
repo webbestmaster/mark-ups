@@ -1,12 +1,12 @@
 (function(win, doc) {
 
+    win.bestApp = win.bestApp || {};
+
     'use strict';
 
     function bindScrollToNode() {
 
         function onClickScrollToNode(e) {
-
-            e.preventDefault();
 
             var node = e.currentTarget,
                 selector = '.' + node.getAttribute('data-js-scroll-to'),
@@ -28,11 +28,12 @@
     }
 
     win.addEventListener('load', function() {
-        bindScrollToNode();
-        $('.js-deals-form-section__select').selectmenu();
-        $('.js-deals-form-section__checkboxradio').checkboxradio();
+        bindScrollToNode(); // scroll to node on click
 
-        $('.js-irs-range-input').ionRangeSlider({
+        $('.js-deals-form-section__select').selectmenu(); // custom dropdown
+        $('.js-deals-form-section__checkboxradio').checkboxradio(); // custom checkbox
+
+        $('.js-irs-range-input').ionRangeSlider({ // custion range slider
             type: 'double',
             min: 1000,
             max: 2700,
@@ -40,6 +41,16 @@
             force_edges: true,
             prefix: '$'
         });
+
+        var swiper = new Swiper('.js-horizontal-scroll', {
+            scrollbar: '.swiper-scrollbar',
+            scrollbarHide: true,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            grabCursor: false,
+            preventClicks: false
+        });
+
 
     }, false);
 

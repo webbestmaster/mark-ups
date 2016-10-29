@@ -3,16 +3,23 @@
   border-bottom: 1px solid $regularColorUltraLight;
   text-align: center;
   margin-bottom: 55px;
+  .swiper-wrapper {
+    display: block;
+  }
+  .swiper-slide {
+    display: inline-block;
+  }
 }
 
 .local-navigation__link {
   font-size: 17px;
   line-height: 20px;
   padding: 23px 21px 16px;
-  display: inline-block;
   text-decoration: none;
   color: $regularColor;
   text-transform: uppercase;
+  white-space: nowrap;
+  width: auto;
 }
 
 .local-navigation__link:hover {
@@ -23,16 +30,14 @@
   
   .local-navigation {
     width: 100%;
-    overflow-x: scroll; 
+    overflow: hidden;
     margin-bottom: 9px;
-  }
-
-  .local-navigation__link-holder {
-    width: 940px;    
-  }
-
-  .local-navigation__link {
-    float: left;
+    .swiper-wrapper {
+      display: flex;
+    }
+    .swiper-slide {
+      float: left;
+    }
   }
 
 }

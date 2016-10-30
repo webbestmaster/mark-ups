@@ -187,4 +187,21 @@
     display: block;
   }
 
+  .all-deals-form {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 320px;
+    padding: 80px 20px 20px;
+    box-sizing: border-box;
+  }
+
+
+  .all-deals-form__header {
+    display: none;
+  }
+
 }

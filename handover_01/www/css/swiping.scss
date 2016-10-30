@@ -3,6 +3,26 @@
   // add needed code here (c) Cap
 }
 
+.swiper-container {
+  overflow: initial;
+}
+
+.swiper-wrapper {
+  display: block;
+}
+
+.added-swiper {
+
+  .swiper-container {
+    overflow: hidden;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+}
+
 @media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
   .swiper-container.horizontal-scroll {

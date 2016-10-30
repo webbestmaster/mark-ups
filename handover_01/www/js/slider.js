@@ -61,6 +61,8 @@
 
             var $node = $(node);
 
+            $node.addClass('added-swiper');
+
             if ($node.hasClass('js-horizontal-scroll')) {
                 return new Swiper($node, cfg.normal);
             }
@@ -75,6 +77,7 @@
 
     function destroy() {
         swipers.forEach(function (swiper) {
+            swiper.wrapper.parent().removeClass('added-swiper');
             swiper.destroy(false, true);
         });
     }
@@ -84,6 +87,7 @@
     function initDoubleSwiper() {
 
         doubleSwipers.forEach(function (swiper) {
+            swiper.wrapper.parent().removeClass('added-swiper');
             swiper.destroy(false, true);
         });
 
@@ -94,6 +98,8 @@
         if (platform === 'mobile') {
             doubleSwipers = Array.prototype.map.call(nodes, function (node) {
                 var $node = $(node);
+
+                $node.addClass('added-swiper');
                 return new Swiper($node, cfg.centered);
             });
         }
@@ -101,28 +107,11 @@
         if (platform === 'desktop') {
             doubleSwipers = Array.prototype.map.call(nodes, function (node) {
                 var $node = $(node);
+
+                $node.addClass('added-swiper');
                 return new Swiper($node, cfg.double);
             });
         }
-
-/*
-        switch (platform) {
-
-            case 'desktop':
-
-                break;
-
-            case 'mobile':
-
-                break;
-
-            default:
-                console.log('WAT?!');
-
-        }
-*/
-
-
 
     }
 

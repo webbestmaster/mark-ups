@@ -11,18 +11,16 @@
 
     {{= it.chunks['deal-header.html'] }}
 
-<div style="display: none;">
-
     {{= it.chunks['deal-promo-photo.html'] }}
 
     {{= dot.template(it.chunks['deal-promo-media.html'])({}) }}
 
     <div class="deal-wrapper">
         {{= dot.template(it.chunks['deal-options.html'])({}) }}
-        {{= dot.template(it.chunks['deal-data.html'])({}) }}
+        <div style="display: none;">
+            {{= dot.template(it.chunks['deal-data.html'])({}) }}
+        </div>
     </div>
-
-</div>
 
 <div style="height: 1000px"></div>
 

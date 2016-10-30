@@ -95,7 +95,39 @@
   font-weight: bold;
 }
 
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
+  .deal-wrapper {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .deal-options {
+    float: none;
+  }
+
+  .deal-option {
+    margin: 0;
+    background-color: $regularColorUltraLight;
+  }
+
+  .deal-options__main-header {
+    text-align: center;
+    padding-bottom: 22px;
+  }
+
+  .deal-option__head-line {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .deal-option-card {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}
 
 
 

@@ -18,11 +18,15 @@
 
 <div class="all-deals">
 
-	<div class="all-deals__main-holder" style="display: none">
+	<div class="all-deals__main-holder">
 
-	{{= dot.template(it.chunks['all-deals-form.html'])({
+	<div style="display: none">
+
+    {{= dot.template(it.chunks['all-deals-form.html'])({
 		chunks: it.chunks
 	}) }}
+
+    </div>
 
 	{{= dot.template(it.chunks['all-deals-result.html'])({
 		dot: dot,

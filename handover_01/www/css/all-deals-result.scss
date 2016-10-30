@@ -47,6 +47,9 @@
   position: absolute;
   left: 400px;
   bottom: 49px;
+  &:after {
+    @extend .clear-self:after;
+  }
 }
 
 .deals-result-card__tag {
@@ -63,7 +66,75 @@
   bottom: 17px;
 }
 
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
+  .all-deals-result {
+    padding: 0;
+    width: auto;
+    float: none;
+    border-left: none;
+  }
 
+  .deals-result__counter {
+    font-size: 28px;
+    padding: 16px 15px 11px;
+    text-align: left;
+    border: 1px solid $adsBorderColor;
+    margin-bottom: 20px;
+  }
 
+  .deals-result-card {
+    width: auto;
+    height: auto;
+    margin: 15px 15px 20px;
+    float: none;
+    padding-right: 0;
+  }
 
+  .deals-result-card__photo {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .deals-result-card__header,
+  .deals-result-card__cost,
+  .deals-result-card__tags-holder,
+  .deals-result-card__offer-ends {
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+
+  .deals-result-card__cost {
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 18px;
+    padding-bottom: 5px;
+    .family-deals-card__included-icon {
+      height: 15px;
+      margin-left: 8px;
+    }
+  }
+
+  .deals-result-card__header {
+    font-size: 22px;
+    padding-top: 6px;
+    padding-bottom: 28px;
+  }
+
+  .deals-result-card__tags-holder {
+    position: static;
+    padding-bottom: 11px;
+    .deals-result-card__tag {
+      font-size: 12px;
+    }
+  }
+
+  .deals-result-card__offer-ends {
+    clear: both;
+    position: static;
+    padding-bottom: 20px;
+  }
+
+}

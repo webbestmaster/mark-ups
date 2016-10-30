@@ -12,14 +12,19 @@
 		&hellip;
 	</span>
 
+	{{ var desktopOnly = ' for-desktop-only', addedClass; }}
+
 	{{ for (var i = 3; i <= 13; i += 1 ) { }}
+
+		{{ addedClass = (i > 5) ? desktopOnly : ''; }}
+
 		{{? i === 5 }}
-		<span class="deals-pagination__link deals-pagination__link--active">
+		<span class="deals-pagination__link deals-pagination__link--active{{= addedClass}}">
 			<span class="deals-pagination__link-active-mark"></span>
 			{{= i }}
 		</span>
 		{{??}}
-		<span class="deals-pagination__link">
+		<span class="deals-pagination__link{{= addedClass}}">
 			<span class="deals-pagination__link-active-mark"></span>
 			{{= i }}
 		</span>

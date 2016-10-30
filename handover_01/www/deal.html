@@ -7,18 +7,24 @@
 </head>
 <body>
 
-{{= it.chunks['header-menu.html'] }}
+    {{= it.chunks['header-menu.html'] }}
 
-{{= it.chunks['deal-header.html'] }}
+    {{= it.chunks['deal-header.html'] }}
 
-{{= it.chunks['deal-promo-photo.html'] }}
+<div style="display: none;">
 
-{{= dot.template(it.chunks['deal-promo-media.html'])({}) }}
+    {{= it.chunks['deal-promo-photo.html'] }}
 
-<div class="deal-wrapper">
-	{{= dot.template(it.chunks['deal-options.html'])({}) }}
-	{{= dot.template(it.chunks['deal-data.html'])({}) }}
+    {{= dot.template(it.chunks['deal-promo-media.html'])({}) }}
+
+    <div class="deal-wrapper">
+        {{= dot.template(it.chunks['deal-options.html'])({}) }}
+        {{= dot.template(it.chunks['deal-data.html'])({}) }}
+    </div>
+
 </div>
+
+<div style="height: 1000px"></div>
 
 {{= it.chunks['footer.html'] }}
 

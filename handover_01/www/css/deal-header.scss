@@ -20,6 +20,7 @@
   display: inline-block;
   margin-right: 10px;
   position: static;
+  float: none;
 }
 
 .deal-header__point-name {
@@ -46,7 +47,34 @@
   background-position: right 3px;
 }
 
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
+  .deal-header {
+    padding: 82px 10px 10px;
+    text-align: center;
+  }
+
+  .deal-header__tags-holder {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .deal-header__tag {
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  .deal-header__point-name {
+    font-size: 50px;
+    padding-bottom: 4px;
+  }
+
+  .deal-header__view-options {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+}
 
 
 

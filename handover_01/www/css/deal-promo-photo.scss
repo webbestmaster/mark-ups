@@ -8,6 +8,7 @@
 }
 
 .deal-promo-photo__photo {
+  height: 100%;
   position: absolute;
   z-index: 0;
   left: 50%;
@@ -36,4 +37,29 @@
   position: relative;
   top: 9px;
   margin-right: 13px;
+}
+
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
+
+  .deal-promo-photo {
+    height: 340px;
+  }
+
+  .deal-promo-photo__head-line-icon {
+    width: 45px;
+    height: 37px;
+    left: 14px;
+    top: 27px;
+    position: absolute;
+  }
+
+  .deal-promo-photo__head-line {
+    font-size: 26px;
+    padding: 27px 10px 10px 73px;
+    background-color: transparent;
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
 }

@@ -15,6 +15,7 @@
 }
 
 .deals-result-card {
+  clear: both;
   display: block;
   height: 220px;
   margin-bottom: 20px;
@@ -88,6 +89,17 @@
 }
 
 .deals-result__filtered-describe--bold {
+  font-weight: bold;
+}
+
+.deals-result__clear-filtered {
+  display: none;
+  float: left;
+  text-decoration: none;
+  color: #6cb7ca;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 20px 18px;
   font-weight: bold;
 }
 
@@ -168,6 +180,10 @@
   }
 
   .deals-result__filtered-describe {
+    display: block;
+  }
+
+  .deals-result__clear-filtered {
     display: block;
   }
 

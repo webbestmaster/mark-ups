@@ -64,5 +64,48 @@
 
 @media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
+  .featured-deals {
+    margin: 0;
+  }
+
+  .featured-deals-card {
+    width: 270px;
+    height: 209px;
+    margin: 10px;
+  }
+
+  .featured-deals-card__header {
+    font-size: 22px;
+    padding: 16px 21px 10px;
+  }
+
+  .featured-deals-card__from {
+    bottom: 86px;
+    left: 21px;
+  }
+
+  .featured-deals-card__paragraph {
+    left: 20px;
+    bottom: 16px;
+    font-size: 14px;
+  }
+
+  .featured-deals-card__cost {
+    font-size: 40px;
+    text-align: left;
+    display: block;
+    float: none;
+    top: 0;
+  }
+
+  .family-deals-card__included-icon {
+    margin-left: 0;
+    height: 15px;
+  }
+
+  .family-deals-card__included-icon--night {
+    margin-left: 10px;
+  }
+
 }
 

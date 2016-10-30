@@ -109,6 +109,8 @@
   .deal-option {
     margin: 0;
     background-color: $regularColorUltraLight;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $adsBorderColor;
   }
 
   .deal-options__main-header {
@@ -119,12 +121,15 @@
   .deal-option__head-line {
     font-size: 22px;
     margin-bottom: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
   }
 
   .deal-option-card {
     width: auto;
     margin-left: 10px;
     margin-right: 10px;
+    background-color: #fff;
   }
 
 }

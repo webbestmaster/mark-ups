@@ -19,18 +19,18 @@
 
 .deal-data-card__switcher {
   top: 27px;
-  right: 4px;
+  right: -1px;
   position: absolute;
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url(../i/arrows/accordion_arrow_big_down_gray.svg);
+  background-image: url(../i/arrows/arrow-big-down-gray.svg);
 }
 
 .deal-data-card__switcher--open {
-  background-image: url(../i/arrows/accordion_arrow_big_down_orange.svg);
+  background-image: url(../i/arrows/arrow-big-up-orange.svg);
 }
 
 .deal-data-card__header {
@@ -158,8 +158,74 @@
   background-image: url(../i/deal/smile-gray.png);
 }
 
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
+  .deal-data {
+    float: none;
+    width: auto;
+  }
 
+  .deal-data__map {
+    display: block;
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .deal-data-card__header,
+  .deal-data-card__subheading,
+  .deal-data-card__paragraph,
+  .deal-data__big-video {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .deal-data-card__header {
+    font-size: 28px;
+    padding-top: 13px;
+    padding-bottom: 11px;
+  }
+
+  .deal-data-card__switcher {
+    top: 9px;
+    right: 4px;
+    background-size: 15px 15px;
+  }
+
+  .deal-data-card__subheading {
+    font-size: 18px;
+  }
+
+  .deal-data-card__paragraph {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .deal-data__big-video {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .deal-data-card__list {
+    padding-left: 18px;
+  }
+
+  .deal-data-card__list-item:before {
+    left: -2px;
+    top: -3px;
+  }
+
+  .deal-data-review__holder {
+    padding-top: 30px;
+    padding-bottom: 26px;
+  }
+
+  .deal-data-review {
+    margin: 5px;
+    padding: 20px 22px;
+    width: 230px;
+  }
+
+}
 
 
 

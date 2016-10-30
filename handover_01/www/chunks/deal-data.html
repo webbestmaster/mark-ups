@@ -28,11 +28,13 @@
 				<li class="deal-data-card__list-item">Find something else more interesting stares at human while pushing stuff off a table yet rub face on owner leave fur on owners clothes purr while eating walk on car leaving trail of paw prints on hood and windshield, where is my slave? I'm getting hungry.</li>
 			</ul>
 
-			<div class="deal-data-review__holder">
+			<div class="deal-data-review__holder swiper-container horizontal-scroll js-horizontal-scroll--centered-slides">
 
-				{{~ [1,2,3] :item }}
+                <div class="swiper-wrapper">
+
+                {{~ [1,2,3] :item }}
 				
-					<div class="deal-data-review">
+					<div class="deal-data-review swiper-slide">
 						<img src="img/stories/stories-author.jpg" alt="" class="deal-data-review__author-avatar">
 						<p class="deal-data-review__author-name">Alex</p>
 						<p class="deal-data-review__review">Damn that dog under the bed. Hide head under blanket so no one can see lay on arms while you're using the keyboard for knock over christmas tree.</p>
@@ -48,8 +50,11 @@
 
 				{{~}}
 
-			</div>
+    			</div>
 
+                <div class="swiper-scrollbar"></div>
+
+            </div>
 
 		</div>
 

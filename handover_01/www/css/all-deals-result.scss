@@ -66,6 +66,20 @@
   bottom: 17px;
 }
 
+.all-deals-result__counter-filter-icon {
+  display: none;
+  background-image: url(../i/form/filter-gray.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 61px;
+  height: 61px;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px solid $adsBorderColor;
+}
+
 @media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
   .all-deals-result {
@@ -76,6 +90,7 @@
   }
 
   .deals-result__counter {
+    position: relative;
     font-size: 28px;
     padding: 16px 15px 11px;
     text-align: left;
@@ -135,6 +150,10 @@
     clear: both;
     position: static;
     padding-bottom: 20px;
+  }
+
+  .all-deals-result__counter-filter-icon {
+    display: block;
   }
 
 }

@@ -1,27 +1,33 @@
 <div class="deal-promo-media">
 	
-	<div class="deal-promo-media__card-holder">
-		
-		{{~ [1,2] :item }}
+	<div class="deal-promo-media__card-holder swiper-container horizontal-scroll js-horizontal-scroll--centered-slides">
 
-		<div class="deal-promo-media-card">
-			<img src="img/deal/deal-media-photo.jpg" alt="" class="deal-promo-media-card__photo">
-			<p class="deal-promo-media-card-description">
-				<img src="i/deal/orange-camera-icon.png" class="deal-promo-media-card-description__icon" alt="">
-				Lorem ipsum image caption
-			</p>
+		<div class="swiper-wrapper">
+
+			{{~ [1,2] :item }}
+
+			<div class="deal-promo-media-card swiper-slide">
+				<img src="img/deal/deal-media-photo.jpg" alt="" class="deal-promo-media-card__photo">
+				<p class="deal-promo-media-card-description">
+					<img src="i/deal/orange-camera-icon.png" class="deal-promo-media-card-description__icon" alt="">
+					Lorem ipsum image caption
+				</p>
+			</div>
+
+			<div class="deal-promo-media-card swiper-slide">
+				<img src="img/deal/deal-media-photo.jpg" alt="" class="deal-promo-media-card__photo">
+				<img src="i/deal/play-move-icon.png" class="deal-promo-media-card__play-icon" alt="">
+				<p class="deal-promo-media-card-description">
+					<img src="i/deal/orange-video-icon.png" class="deal-promo-media-card-description__icon" alt="">
+					Lorem ipsum video caption
+				</p>
+			</div>
+
+			{{~}}
+
 		</div>
 
-		<div class="deal-promo-media-card">
-			<img src="img/deal/deal-media-photo.jpg" alt="" class="deal-promo-media-card__photo">
-			<img src="i/deal/play-move-icon.png" class="deal-promo-media-card__play-icon" alt="">
-			<p class="deal-promo-media-card-description">
-				<img src="i/deal/orange-video-icon.png" class="deal-promo-media-card-description__icon" alt="">
-				Lorem ipsum video caption
-			</p>
-		</div>
-		
-		{{~}}
+		<div class="swiper-scrollbar"></div>
 
 	</div>
 

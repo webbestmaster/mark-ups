@@ -1,6 +1,6 @@
 .deal-promo-media {
   border-bottom: 1px solid $adsBorderColor;
-  padding-bottom: 51px;
+  padding-bottom: 11px;
   &:after {
     @extend .clear-self:after;
   }
@@ -21,6 +21,8 @@
   position: relative;
   float: left;
   margin: 0 10px;
+  min-height: 207px;
+  width: 271px;
 }
 
 .deal-promo-media-card__photo {
@@ -44,6 +46,14 @@
   position: absolute;
   top: 41px;
   left: 100px;
+}
+
+@media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
+
+  .deal-promo-media {
+    padding-bottom: 10px;
+  }
+
 }
 
 

@@ -3,8 +3,8 @@
   height: 680px;
   overflow: hidden;
   max-width: 1680px;
-  margin: 0 auto;
-  padding-bottom: 41px;
+  margin: 0 auto 30px;
+  padding-bottom: 11px;
 }
 
 .deal-promo-photo__photo {
@@ -42,7 +42,9 @@
 @media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
   .deal-promo-photo {
-    height: 340px;
+    height: 381px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
   }
 
   .deal-promo-photo__head-line-icon {

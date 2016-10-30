@@ -1,9 +1,11 @@
 <div class="featured-deals">
 
-    <div class="featured-deals__card-holder">
+    <div class="featured-deals__card-holder swiper-container horizontal-scroll js-horizontal-scroll--centered-slides">
+
+        <div class="swiper-wrapper">
 
         {{~ [1,2,3,4] :item }}
-        <a href="#" class="featured-deals-card">
+        <a href="#" class="featured-deals-card swiper-slide">
 
             <h3 class="featured-deals-card__header">Seminyak Sky High Sensation</h3>
             <p class="featured-deals-card__from">From</p>
@@ -19,6 +21,10 @@
 
         </a>
         {{~}}
+
+        </div>
+
+        <div class="swiper-scrollbar"></div>
 
         <a class="places-to-go__load-more" href="#">More featured deals</a>
 

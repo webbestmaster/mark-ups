@@ -1,6 +1,5 @@
 .promo-text {
   @extend .regular-wrapper;
-  font-family: Tahoma, sans-serif;
   text-align: center;
   padding-bottom: 42px;
 }
@@ -18,6 +17,10 @@
 
   .promo-text {
     padding-bottom: 8px;
+    .promo-text__read-more {
+      display: inline-block;
+      margin-top: 0;
+    }
   }
 
   .promo-text__paragraph {

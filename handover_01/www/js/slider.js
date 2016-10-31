@@ -1,6 +1,27 @@
 (function (win, doc) {
 
-    var desctopWidth = 1200;
+    var DESKTOP = 'desktop';
+    var TABLET = 'tablet';
+    var MOBILE = 'mobile';
+
+    var DESKTOP_WIDTH = 1200;
+    var TABLET_WIDTH = 768;
+
+    function getPlatform() {
+        
+        var width = doc.documentElement.clientWidth;
+
+        if (width >= DESKTOP_WIDTH) {
+            return DESKTOP;
+        }
+
+        if (width >= TABLET_WIDTH) {
+            return TABLET;
+        }
+
+        return MOBILE;
+
+    }
 
     var swipers = [];
 
@@ -40,18 +61,19 @@
 
     function init() {
 
-        var curState = doc.documentElement.clientWidth >= desctopWidth ? 'desktop' : 'mobile';
+        var curState = getPlatform();
 
         if (prevState === curState) { // do not anything if state is equal
             return;
         }
 
-        initDoubleSwiper();
-
         prevState = curState;
 
-        if (curState === 'desktop') {
-            destroy();
+        initDoubleSwiper();
+
+        destroy();
+
+        if (curState === DESKTOP) {
             return;
         }
 
@@ -68,7 +90,15 @@
             }
 
             if ($node.hasClass('js-horizontal-scroll--centered-slides')) {
-                return new Swiper($node, cfg.centered);
+
+                if (curState === TABLET) {
+                    return new Swiper($node, cfg.normal);
+                }
+
+                if (curState === MOBILE) {
+                    return new Swiper($node, cfg.centered);
+                }
+
             }
 
         });
@@ -91,27 +121,33 @@
             swiper.destroy(false, true);
         });
 
-        var platform = doc.documentElement.clientWidth >= desctopWidth ? 'desktop' : 'mobile',
+        var platform = getPlatform(),
             nodes = $('.js-double-horizontal-scroll--centered-slides');
 
-
-        if (platform === 'mobile') {
+        if (platform === DESKTOP) {
             doubleSwipers = Array.prototype.map.call(nodes, function (node) {
                 var $node = $(node);
+                $node.addClass('added-swiper');
+                return new Swiper($node, cfg.double);
+            });
+        }
 
+        if (platform === TABLET) {
+            doubleSwipers = Array.prototype.map.call(nodes, function (node) {
+                var $node = $(node);
+                $node.addClass('added-swiper');
+                return new Swiper($node, cfg.normal);
+            });
+        }
+
+        if (platform === MOBILE) {
+            doubleSwipers = Array.prototype.map.call(nodes, function (node) {
+                var $node = $(node);
                 $node.addClass('added-swiper');
                 return new Swiper($node, cfg.centered);
             });
         }
 
-        if (platform === 'desktop') {
-            doubleSwipers = Array.prototype.map.call(nodes, function (node) {
-                var $node = $(node);
-
-                $node.addClass('added-swiper');
-                return new Swiper($node, cfg.double);
-            });
-        }
 
     }
 

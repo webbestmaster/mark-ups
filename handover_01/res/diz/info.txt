@@ -18,3 +18,8 @@ https://github.com/boundround/javascript/tree/master/es5
 // Price slider
 // site http://ionden.com/a/plugins/ion.rangeSlider/en.html
 // git https://github.com/IonDen/ion.rangeSlider
+
+// airbnb calendar
+https://github.com/airbnb/react-dates/tree/master/examples
+
+

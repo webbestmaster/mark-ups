@@ -46,12 +46,12 @@
   position: absolute;
   left: 50%;
   top: 49%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
   color: #fff;
   font-size: 52px;
   width: 80%;
   text-align: center;
+  font-family: signika-bold, sans-serif;
 }
 
 .places-to-go-card__background {
@@ -95,10 +95,6 @@
     width: 272px;
     height: 360px;
     margin: 5px;
-  }
-
-  .places-to-go-card__card-name {
-    font-weight: bold;
   }
 
   .places-to-go__header {

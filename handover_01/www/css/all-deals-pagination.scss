@@ -67,7 +67,20 @@
   }
 
   .all-deals-pagination {
-    padding-bottom: 30px;
+    padding: 28px 15px 30px;
+  }
+
+  .deals-pagination__link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .deals-pagination__left-arrow {
+    margin-right: 5px;
+  }
+
+  .deals-pagination__right-arrow {
+    margin-left: 5px;
   }
 
 }

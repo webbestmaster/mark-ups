@@ -1,15 +1,14 @@
 <div class="deal-data">
 	
 	<img src="img/deal/deal-map.jpg" class="deal-data__map" />
-	
-	<div class="deal-data-card">
-		<span class="deal-data-card__switcher"></span>
-		<h2 class="deal-data-card__header">Highlights</h2>
-	</div>
 
-	<div class="deal-data-card">
-		<span class="deal-data-card__switcher deal-data-card__switcher--open"></span>
-		<h2 class="deal-data-card__header deal-data-card__header--open">Details</h2>
+	{{~ ['Highlights', 'Details', 'Booking Guarantee', 'Facilities', 'Reviews', 'Fine Print'] :item:index }}
+
+	{{ var openClass = index % 3 ? '' : 'deal-data-card--open-card'; }}
+
+	<div class="deal-data-card {{= openClass }}">
+		<span class="deal-data-card__switcher"></span>
+		<h2 class="deal-data-card__header open js-show-hide-info-block">{{= item }}</h2>
 		<div class="deal-data-card__info-block">
 			<h3 class="deal-data-card__subheading">
 				Subheading
@@ -60,11 +59,6 @@
 
 	</div>
 
-	{{~ ['Booking Guarantee', 'Facilities', 'Reviews', 'Fine Print'] :item }}
-	<div class="deal-data-card">
-		<span class="deal-data-card__switcher"></span>
-		<h2 class="deal-data-card__header">{{= item }}</h2>
-	</div>
 	{{~}}
 
 </div>

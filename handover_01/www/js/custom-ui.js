@@ -1,6 +1,6 @@
 (function (win) {
 
-    'use strict';
+    "use strict";
 
     $(win).on('load', function () {
 

@@ -1,5 +1,7 @@
 (function (win, doc) {
 
+    "use strict";
+
     var DESKTOP = 'desktop';
     var TABLET = 'tablet';
     var MOBILE = 'mobile';

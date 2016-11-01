@@ -1,7 +1,6 @@
 (function(win, doc) {
 
-    'use strict';
-
+    "use strict";
 
     $(win).on('load', function() {
         // scroll to node on click

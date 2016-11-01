@@ -1,6 +1,6 @@
 (function (win, doc) {
 
-    'use strict';
+    "use strict";
 
     console.log('I loaded... :)');
 

@@ -1,5 +1,7 @@
 (function () {
 
+    "use strict";
+
     function init() {
 
         $('.js-show-hide-details--show').on('click', function () {

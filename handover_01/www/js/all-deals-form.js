@@ -1,11 +1,12 @@
-(function () {
+(function (win, doc) {
 
     "use strict";
 
     function init() {
 
-        var nodeForm = document.querySelector('.js-all-deals-form'),
-            $form = $(nodeForm);
+        var nodeForm = doc.querySelector('.js-all-deals-form'),
+            $form = $(nodeForm),
+            $fadeForm = $('.js-all-deals-form__mobile-fade');
 
         if (!nodeForm) {
             return;
@@ -39,11 +40,33 @@
 
         });
 
+        $(win).on('resize', function () {
+            // show/hide form, detect is mobile and etc. here
+        });
+
+        // show filter form for mobile
+        function showHideFilterMenu() {
+            if ($form.hasClass('all-deals-form--mobile-open')) { // hide form
+                $form.removeClass('all-deals-form--mobile-open');
+                $fadeForm.removeClass('all-deals-form__mobile-fade--visible');
+            } else { // show hide
+                $form.addClass('all-deals-form--mobile-open');
+                $fadeForm.addClass('all-deals-form__mobile-fade--visible');
+            }
+        }
+
+        // $form.touchwipe('swipeleft', showHideFilterMenu);
+        $fadeForm.on('swipeleft', showHideFilterMenu);
+
+        $fadeForm.on('click', showHideFilterMenu);
+
+        $('.js-open-mobile-filter').on('click', showHideFilterMenu);
+
 
 
 
     }
 
-    $(window).on('load', init);
+    $(win).on('load', init);
 
-}());
+}(window, window.document));

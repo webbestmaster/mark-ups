@@ -61,7 +61,7 @@
 
         $('.js-open-mobile-filter').on('click', showHideFilterMenu);
 
-
+        // FIXME - js-deals-form-section__header
 
 
     }

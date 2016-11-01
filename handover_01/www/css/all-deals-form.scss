@@ -274,7 +274,20 @@
     }
   }
 
+  .deals-form-section__reset-section {
+    display: none;
+  }
 
+  .deals-form-section__header {
+    background-image: url(../i/arrows/arrow-big-up-gray.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 10px 10px;
+  }
+
+  .deals-form-section__header--open {
+    background-image: url(../i/arrows/arrow-big-down-gray.svg);
+  }
 
 }
 

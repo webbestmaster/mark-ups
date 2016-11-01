@@ -55,8 +55,7 @@
             }
         }
 
-        // $form.touchwipe('swipeleft', showHideFilterMenu);
-        $fadeForm.on('swipeleft', showHideFilterMenu);
+        $form.on('swipeleft', showHideFilterMenu);
 
         $fadeForm.on('click', showHideFilterMenu);
 

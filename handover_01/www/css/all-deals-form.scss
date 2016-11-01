@@ -261,6 +261,21 @@
     }
   }
 
+  .deals-form-section__label {
+    .ui-checkboxradio-icon {
+      float: left;
+      margin-right: 7px;
+      margin-top: -3px;
+      &.ui-state-checked {
+        margin-right: 5px;
+        right: auto;
+        left: 1px;
+      }
+    }
+  }
+
+
+
 }
 
 

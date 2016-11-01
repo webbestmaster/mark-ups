@@ -2,8 +2,10 @@
 
 html, body,
 h1, h2, h3, h4, h5, h6,
-p, input,
-ul, li {
+p, a, span,
+form, fieldset, input,
+ul, li
+{
   font-size: 16px;
   line-height: 1.15;
   font-weight: normal;

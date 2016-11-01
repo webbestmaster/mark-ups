@@ -42,7 +42,7 @@
 }
 
 .deal-option-card {
-  padding: 25px;
+  padding: 25px 25px 15px;
   width: 320px;
   position: relative;
   @extend .card-shadow;
@@ -87,13 +87,38 @@
 
 .deal-option-card__descriptions {
   font-size: 16px;
-  padding-top: 15px;
+  padding-bottom: 5px;
   line-height: 20px;
 }
 
 .deal-option-card__descriptions--bold {
   font-weight: bold;
 }
+
+.deal-option-card__details {
+  padding-top: 8px;
+}
+
+.deal-option-card__show-hide-details {
+  display: none;
+  font-size: 16px;
+  color: $regularColorLight;
+  text-transform: uppercase;
+}
+
+/*
+.deal-option-card__show-hide-details--show {
+  //display: block;
+}
+
+.deal-option-card__show-hide-details--hide {
+  //display: block;
+}
+
+.deal-option-card__details-interactive-block {
+  //display: block;
+}
+*/
 
 @media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
@@ -131,6 +156,38 @@
     margin-left: 10px;
     margin-right: 10px;
     background-color: #fff;
+  }
+
+  /* show-hide interactive block */
+
+  /* default state */
+  .deal-option-card__details-interactive-block {
+    display: none;
+  }
+
+  .deal-option-card__show-hide-details--show {
+    display: block;
+  }
+
+  .deal-option-card__show-hide-details--hide {
+    display: none;
+  }
+
+  /* show details clicked state */
+  .deal-option-card__details--show-interactive-block {
+
+    .deal-option-card__details-interactive-block {
+      display: block;
+    }
+
+    .deal-option-card__show-hide-details--show {
+      display: none;
+    }
+
+    .deal-option-card__show-hide-details--hide {
+      display: block;
+    }
+
   }
 
 }

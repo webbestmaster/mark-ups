@@ -59,9 +59,11 @@
 
         $fadeForm.on('click', showHideFilterMenu);
 
-        $('.js-open-mobile-filter').on('click', showHideFilterMenu);
+        $('.js-open-mobile-filter, .js-all-deals-form__mobile-close').on('click', showHideFilterMenu);
 
-        // FIXME - js-deals-form-section__header
+        $('.js-deals-form-section__header').on('click', function () {
+            $(this).parent().toggleClass('deals-form-section--mobile-open');
+        });
 
 
     }

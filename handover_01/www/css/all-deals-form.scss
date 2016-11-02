@@ -266,6 +266,13 @@
   display: none;
 }
 
+.range-date-picker {
+  display: block;
+  width: 198px;
+  padding: 8px 8px 6px;
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */
 
   .all-deals-form {

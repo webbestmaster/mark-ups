@@ -12,6 +12,9 @@
             return;
         }
 
+        // calendar
+        $('.js-range-date-picker').daterangepicker();
+
         // full form reset
         $('.js-deals-form-section__reset-all').on('click', function () {
             nodeForm.reset();

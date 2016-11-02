@@ -2,6 +2,8 @@
 
     "use strict";
 
-    console.log('I loaded... :)');
+    $(win).on('load', function () {
+        console.log('I loaded... :)');
+    });
 
 }(window, window.document));

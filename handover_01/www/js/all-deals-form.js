@@ -18,9 +18,19 @@
         // full form reset
         $('.js-deals-form-section__reset-all').on('click', function () {
             nodeForm.reset();
+
             // reset price ranger
-            $('.js-irs-range-input').data("ionRangeSlider").reset();
+            $form.find('.js-irs-range-input').each(function () {
+                $(this).data('ionRangeSlider').reset();
+            });
+
             // reset calendar
+            $form.find('.js-range-date-picker').each(function () {
+                var daterangepicker = $(this).data('daterangepicker'),
+                    now = moment();
+                daterangepicker.setStartDate(now);
+                daterangepicker.setEndDate(now);
+            });
 
         });
 
@@ -41,6 +51,13 @@
 
             $fieldset.find('.js-irs-range-input').each(function () {
                 $(this).data('ionRangeSlider').reset();
+            });
+
+            $fieldset.find('.js-range-date-picker').each(function () {
+                var daterangepicker = $(this).data('daterangepicker'),
+                    now = moment();
+                daterangepicker.setStartDate(now);
+                daterangepicker.setEndDate(now);
             });
 
         });

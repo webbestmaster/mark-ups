@@ -1,18 +1,23 @@
-/* initial part */
-@import 'font-face.scss';
-@import 'vars.scss';
-@import 'user-reset.scss';
-@import 'style.scss';
 /* lib */
 @import '../lib/jquery-ui.css';
 @import '../lib/jquery-ui.structure.css';
 @import '../lib/ion.rangeSlider.css';
 @import '../lib/ion.rangeSlider.skinHTML5.css';
 @import '../lib/swiper.css';
+@import '../lib/bootstrap-edited.css';
+@import '../lib/daterangepicker.css';
+
+/* initial part */
+@import 'font-face.scss';
+@import 'vars.scss';
+@import 'user-reset.scss';
+@import 'style.scss';
+
 /* services */
 @import '../scroll-area.scss';
 @import '../horizontal-slider.scss';
 @import '../swiping.scss';
+
 /* chunks part */
 @import '../header-menu.scss';
 @import '../promo-header.scss';
@@ -27,11 +32,13 @@
 @import '../did-you-know.scss';
 @import '../footer.scss';
 @import '../featured-deals.scss';
+
 /* all deals */
 @import '../all-deals.scss';
 @import '../all-deals-form.scss';
 @import '../all-deals-result.scss';
 @import '../all-deals-pagination.scss';
+
 /* deal */
 @import '../deal.scss';
 @import '../deal-header.scss';
@@ -39,13 +46,3 @@
 @import '../deal-promo-media.scss';
 @import '../deal-options.scss';
 @import '../deal-data.scss';
-
-
-
-
-
-
-
-
-
-

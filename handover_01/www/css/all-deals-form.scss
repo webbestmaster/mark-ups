@@ -268,9 +268,10 @@
 
 .range-date-picker {
   display: block;
-  width: 198px;
+  width: 178px;
   padding: 8px 8px 6px;
   margin: 0 auto;
+  border: 1px solid $regularColorLight;
 }
 
 @media only screen and (max-width: $desktopWidth) { /* $desktopMediaWidth */

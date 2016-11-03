@@ -22,4 +22,9 @@ https://github.com/boundround/javascript/tree/master/es5
 // airbnb calendar
 https://github.com/airbnb/react-dates/tree/master/examples
 
+// google maps
+https://hpneo.github.io/gmaps/examples.html
+https://github.com/webbestmaster/js-samples
+https://habrahabr.ru/post/131654/
+
 

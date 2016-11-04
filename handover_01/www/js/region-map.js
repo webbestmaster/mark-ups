@@ -91,6 +91,8 @@ var dataFromSetver = {
     "use strict";
 
     var map;
+    
+    var pathToMapPoint = 'i/map/map-point.svg';
 
     function RegionMap() {
 
@@ -100,6 +102,8 @@ var dataFromSetver = {
             return;
         }
 
+        this._mapNode = mapNode;
+
         this._mapData = dataFromSetver;
 
         this._map = new google.maps.Map(mapNode, {
@@ -107,32 +111,41 @@ var dataFromSetver = {
             zoom: 8
         });
 
+        this._markers = [];
 
-        // this._points = []; // point[]
-
+        this._addStyle();
         this._addMarkers();
-        // this._bindPointEvents();
 
     }
 
+    RegionMap.prototype._addStyle = function () {
+
+        var style = doc.createElement('style');
+
+        style.innerText = this._mapData.data
+                .map(function (marker) {
+                    return 'img[src="' + marker.preview + '"]';
+                })
+                .join(', ') + '{ border-radius: 50%; }';
+
+        doc.head.appendChild(style);
+
+    };
+
     RegionMap.prototype._addMarker = function (pointData) {
 
-        var map = this._map,
+        var regionMap = this,
+            map = regionMap._map,
             marker = new google.maps.Marker({
                 position: {lat: pointData.lat, lng: pointData.lng},
                 // map: map,
                 draggable: false,
-                icon: 'i/map/map-point.svg',
-                optimized: false,
-                title: pointData.point
+                icon: pathToMapPoint,
+                optimized: false
+                // title: pointData.point
             });
 
-        google.maps.event.addListenerOnce(map, 'tilesloaded', function () {
-            var $imgs = $('img[src="' + pointData.preview + '"]');
-            console.log($imgs);
-
-        });
-
+/*
         google.maps.event.addDomListener(window, 'load', function () {
             var $markerWrapper = $('div[title="' + pointData.point + '"]');
 
@@ -141,15 +154,18 @@ var dataFromSetver = {
                 .attr('data-point-name', pointData.point);
 
         });
+*/
 
         google.maps.event.addDomListener(marker, 'mouseover', function () {
+
+            var mapNode = this._mapNode;
 
             marker.set('icon', pointData.preview);
 
             win.util.waitFor(function () {
-                return $('img[src="' + pointData.preview + '"]').length;
+                return $('img[src="' + pointData.preview + '"]', mapNode).length;
             }, 1000).then(function () {
-                $('img[src="' + pointData.preview + '"]').parent().each(function () {
+                $('img[src="' + pointData.preview + '"]', mapNode).parent().each(function () {
                     $(this).addClass('map-point-hovered');
                 });
             }).catch(function () {
@@ -159,23 +175,39 @@ var dataFromSetver = {
         });
 
         google.maps.event.addDomListener(marker, 'mouseout', function () {
-            marker.set('icon', 'i/map/map-point.svg');
+
             $('.map-point-hovered').removeClass('map-point-hovered');
+
+            var $imgs =  $('img[src="' + pointData.preview + '"]');
+
+            if ($imgs.parent().hasClass('map-point-clicked')) {
+                return;
+            }
+
+            marker.set('icon', pathToMapPoint);
+
         });
 
         google.maps.event.addDomListener(marker, 'click', function () {
 
+            regionMap._markers.forEach(function (marker) {
+                marker.set('icon', pathToMapPoint);
+            });
 
+            $('.map-point-clicked').removeClass('map-point-clicked');
+            $('.map-point-hovered').removeClass('map-point-hovered');
+
+            marker.set('icon', pointData.preview);
+
+            $('img[src="' + pointData.preview + '"]').parent().each(function () {
+                $(this).addClass('map-point-clicked');
+            });
 
         });
 
-        /*
-         google.maps.event.addListener(marker,'mouseover',function(){
-         $('img[src="'+this.icon+'"]').stop().animate({opacity:1});
-         });
-         */
-
         marker.setMap(map);
+
+        return marker;
 
     };
 
@@ -184,8 +216,7 @@ var dataFromSetver = {
         var regionMap = this,
             mapData = regionMap._mapData;
 
-        mapData.data.forEach(regionMap._addMarker, this);
-
+        this._markers = mapData.data.map(regionMap._addMarker, this);
 
     };
 

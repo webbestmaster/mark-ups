@@ -19,9 +19,16 @@
 }
 
 .map-point-hovered {
-  img {
-    border-radius: 50%;
-  }
+  border-radius: 50%;
+  border: 4px solid #fff;
+  filter: grayscale(100%);
+  transform: translate3d(-4px, -4px, 0);
+}
+
+.map-point-clicked {
+  @extend .map-point-hovered;
+  border-color: $buttonColor;
+  filter: grayscale(0);
 }
 
   /*

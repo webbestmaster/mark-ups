@@ -1,13 +1,36 @@
 
 .promo-map {
   position: relative;
-}
-
-.promo-map__placeholder {
-  display: block;
-  max-width: 100%;
+  height: 580px;
+  width: 90%;
   margin: 0 auto;
 }
+
+.google-promo-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.region-map-point {
+  display: block;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+}
+
+.map-point-hovered {
+  img {
+    border-radius: 50%;
+  }
+}
+
+  /*
+  .promo-map__placeholder {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  */
 
 .point-card {
   position: absolute;

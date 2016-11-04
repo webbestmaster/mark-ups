@@ -43,6 +43,11 @@
   margin-top: 23px;
   float: right;
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.deals-form-section__reset-all:hover {
+  text-decoration: none;
 }
 
 .deals-form-section {

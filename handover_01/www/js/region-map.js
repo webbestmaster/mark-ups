@@ -226,10 +226,26 @@
             regionMap.hideAll();
         });
 
+        var elem = $('.js-point-card').get(0);
+        if (elem) {
+            var tl = new TimelineLite();
+            tl.from(elem, 2, { top: -100, opacity: 0, force3D: true });
+        }
+
     };
 
     RegionMap.prototype.hideCard = function () {
-        $('.js-point-card').remove();
+
+        var elem = $('.js-point-card').get(0);
+
+        if (elem) {
+            elem.classList.remove('js-point-card');
+            var tl = new TimelineLite({onComplete: function () {
+                elem.parentNode.removeChild(elem);
+            }});
+            tl.to(elem, 2, { top: 100, opacity: 0, force3D: true });
+        }
+
     };
 
     RegionMap.prototype._addMarker = function (pointData) {
@@ -309,56 +325,6 @@
     };
 
 
-    /*
-     RegionMap.prototype._bindPointEvents = function () {
-
-     var regionMap = this,
-     points = regionMap._points;
-
-     points.forEach(function (point) {
-
-     google.maps.event.addListener(point, 'mouseover', function () {
-
-     $('div[data-point-name="' + point.title + '"]').animate({opacity: 0.1});
-
-     });
-
-
-     });
-
-     };
-     */
-
-    /*   function addMarkersToMap() {
-
-     var image = 'i/poi';
-
-     var marker = new google.maps.Marker({
-     position: myLatLng,
-     // map: map,
-     draggable: true,
-     icon: image,
-     optimized: false,
-     title: 'Hello World!'
-     });
-
-     google.maps.event.addListener(marker,'mouseover',function(){
-     $('img[src="'+this.icon+'"]').stop().animate({opacity:1});
-     });
-
-     google.maps.event.addListener(marker,'mouseout',function(){
-     $('img[src="'+this.icon+'"]').stop().animate({opacity:.5});
-     });
-
-     marker.setMap(map);
-
-     map.panTo({lat: -25.363 + 1, lng: 131.044 + 1});
-
-     // to remove
-     // marker.setMap(null);
-
-     }
-     */
     win.initMap = function () {
         new RegionMap();
     };

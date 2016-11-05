@@ -55,8 +55,8 @@ var dataFromSetver = {
         {
             "lat": -25.363 + 0.5,
             "lng": 131.044 + 0.5,
-            "country": "South Korea",
-            "point": "Jeju Island",
+            "country": "South Korea 2",
+            "point": "Jeju Island 2",
             "description": "Sun bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
             "page-url": "#",
             "preview": "img/promo-map/jeju-island.jpg",

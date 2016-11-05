@@ -59,7 +59,7 @@ var dataFromSetver = {
             "point": "Jeju Island 2",
             "description": "Sun bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
             "page-url": "#",
-            "preview": "img/promo-map/jeju-island.jpg",
+            "preview": "img/promo-map/jeju-island.jpg?ee",
             "inner-cards": [
                 {
                     "img": "path-to-img",
@@ -126,7 +126,7 @@ var dataFromSetver = {
                 .map(function (marker) {
                     return 'img[src="' + marker.preview + '"]';
                 })
-                .join(', ') + ' { border-radius: 50%; }';
+                .join(', ') + ' { border-radius: 50%; filter: grayscale(100%); border: 4px solid #fff !important; } '; // FUUUUCKKK!!!!!!
 
         doc.head.appendChild(style);
 
@@ -145,38 +145,20 @@ var dataFromSetver = {
                 // title: pointData.point
             });
 
-/*
         google.maps.event.addDomListener(window, 'load', function () {
-            var $markerWrapper = $('div[title="' + pointData.point + '"]');
+            $('img[src="' + pathToMapPoint + '"]').parent().addClass('region-map-point');
 
-            $markerWrapper
-                .removeAttr('title')
-                .attr('data-point-name', pointData.point);
+
 
         });
-*/
 
         google.maps.event.addDomListener(marker, 'mouseover', function () {
-
-            var mapNode = this._mapNode;
-
             marker.set('icon', pointData.preview);
-
-            win.util.waitFor(function () {
-                return $('img[src="' + pointData.preview + '"]', mapNode).length;
-            }, 1000).then(function () {
-                $('img[src="' + pointData.preview + '"]', mapNode).parent().each(function () {
-                    $(this).addClass('map-point-hovered');
-                });
-            }).catch(function () {
-                console.log('--- can not find image ---');
-            });
-
         });
 
         google.maps.event.addDomListener(marker, 'mouseout', function () {
 
-            $('.map-point-hovered').removeClass('map-point-hovered');
+            // $('.map-point-hovered').removeClass('map-point-hovered');
 
             var $imgs =  $('img[src="' + pointData.preview + '"]');
 
@@ -195,7 +177,7 @@ var dataFromSetver = {
             });
 
             $('.map-point-clicked').removeClass('map-point-clicked');
-            $('.map-point-hovered').removeClass('map-point-hovered');
+            // $('.map-point-hovered').removeClass('map-point-hovered');
 
             marker.set('icon', pointData.preview);
 

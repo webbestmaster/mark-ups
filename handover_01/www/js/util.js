@@ -1,5 +1,6 @@
 (function (win) {
 
+/*
     win.util = {
 
         waitFor: function (testFn, maxTime) {
@@ -31,5 +32,6 @@
         }
 
     }
+*/
 
 }(window));

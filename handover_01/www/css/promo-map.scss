@@ -18,26 +18,14 @@
   border-radius: 100%;
 }
 
-.map-point-hovered {
-  border-radius: 50%;
-  //border: 4px solid #fff;
-  filter: grayscale(100%);
-  //transform: translate3d(-4px, -4px, 0);
-}
-
-.map-point-clicked {
-  @extend .map-point-hovered;
-  border-color: $buttonColor;
-  filter: grayscale(0);
-}
-
-  /*
-  .promo-map__placeholder {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
+.google-promo-map {
+  .map-point-clicked {
+    img {
+      filter: grayscale(0) !important; /* FUUUCK GOOGLE MAP!!!!!! */
+      border-color: $buttonColor !important; /* FUUUCK AGAIN! */
+    }
   }
-  */
+}
 
 .point-card {
   position: absolute;

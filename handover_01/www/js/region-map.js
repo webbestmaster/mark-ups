@@ -126,7 +126,7 @@ var dataFromSetver = {
                 .map(function (marker) {
                     return 'img[src="' + marker.preview + '"]';
                 })
-                .join(', ') + '{ border-radius: 50%; }';
+                .join(', ') + ' { border-radius: 50%; }';
 
         doc.head.appendChild(style);
 

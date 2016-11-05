@@ -148,13 +148,20 @@
         regionMap._addStyle();
         regionMap._addMarkers();
 
+        google.maps.event.addDomListenerOnce(win, 'load', function onLoad() {
+            $('img[src="' + pathToMapPoint + '"]').parent().addClass('region-map-point');
+        });
+
         regionMap._map.addListener('click', function() {
             regionMap.hideAll();
         });
 
         if (!mapNode.classList.contains('js-do-not-click')) {
             google.maps.event.addListenerOnce(regionMap._map, 'tilesloaded', function(){
-                $('[title="' + regionMap._mapData.data[0].point + '"]').trigger('click');
+                new google.maps.event.trigger( regionMap._markers[0], 'mouseover');
+                setTimeout(function () {
+                    new google.maps.event.trigger( regionMap._markers[0], 'click' );
+                }, 1000);
             });
         }
 
@@ -238,10 +245,6 @@
                 optimized: false,
                 title: pointData.point
             });
-
-        google.maps.event.addDomListenerOnce(win, 'load', function onLoad() {
-            $('img[src="' + pathToMapPoint + '"]').parent().addClass('region-map-point');
-        });
 
         google.maps.event.addDomListener(marker, 'mouseover', function () {
 

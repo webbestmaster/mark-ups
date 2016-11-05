@@ -1,6 +1,12 @@
 <div class="deal-data">
 	
-	<img src="img/deal/deal-map.jpg" class="deal-data__map" />
+	<div class="deal-data__map">
+
+		<div class="google-promo-map js-google-promo-map js-do-not-click"></div>
+
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZB-Uc4acIXG6iUOk9X4HuUwTNRupJDiQ&callback=initMap" type="text/javascript"></script>
+
+	</div>
 
 	{{~ ['Highlights', 'Details', 'Booking Guarantee', 'Facilities', 'Reviews', 'Fine Print'] :item:index }}
 

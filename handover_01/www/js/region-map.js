@@ -148,11 +148,31 @@
         regionMap._addStyle();
         regionMap._addMarkers();
 
-        google.maps.event.addListenerOnce(regionMap._map, 'tilesloaded', function(){
-            $('[title="' + regionMap._mapData.data[0].point + '"]').trigger('click');
+        regionMap._map.addListener('click', function() {
+            regionMap.hideAll();
         });
 
+        if (!mapNode.classList.contains('js-do-not-click')) {
+            google.maps.event.addListenerOnce(regionMap._map, 'tilesloaded', function(){
+                $('[title="' + regionMap._mapData.data[0].point + '"]').trigger('click');
+            });
+        }
+
     }
+
+    RegionMap.prototype.hideAll = function () {
+
+        var regionMap = this;
+
+        regionMap._markers.forEach(function (marker) {
+            marker.set('icon', pathToMapPoint);
+        });
+
+        $('.map-point-clicked').removeClass('map-point-clicked');
+
+        regionMap.hideCard();
+
+    };
 
     RegionMap.prototype._addStyle = function () {
 
@@ -196,7 +216,7 @@
 
         $('.js-promo-map').append(html).find('.js-point-card__close').on('click', function (e) {
             e.preventDefault();
-            regionMap.hideCard();
+            regionMap.hideAll();
         });
 
     };
@@ -258,11 +278,7 @@
 
         google.maps.event.addDomListener(marker, 'click', function () {
 
-            regionMap._markers.forEach(function (marker) {
-                marker.set('icon', pathToMapPoint);
-            });
-
-            $('.map-point-clicked').removeClass('map-point-clicked');
+            regionMap.hideAll();
 
             marker.set('icon', pointData.preview);
 

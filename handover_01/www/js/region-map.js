@@ -1,120 +1,156 @@
-var dataFromSetver = {
-    "data": [
-        {
-            "lat": -25.363,
-            "lng": 131.044,
-            "country": "South Korea",
-            "point": "Jeju Island",
-            "description": "Sun bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
-            "page-url": "#",
-            "preview": "img/promo-map/jeju-island.jpg",
-            "inner-cards": [
-                {
-                    "img": "path-to-img",
-                    "header": "Seoul",
-                    "description": "Tropical Fruit World"
-                },
-                {
-                    "img": "path-to-img",
-                    "header": "Seoul",
-                    "description": "Tropical Fruit World"
-                },
-                {
-                    "img": "path-to-img",
-                    "header": "Seoul",
-                    "description": "Tropical Fruit World"
-                }
-            ]
-        },
-        {
-            "lat": -25.363 + 1,
-            "lng": 131.044 + 1,
-            "country": "South Korea 2",
-            "point": "South Korea 2",
-            "description": "Sun!!! bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
-            "page-url": "#",
-            "preview": "img/promo-map/kyoto.jpg",
-            "inner-cards": [
-                {
-                    "img": "path-to-img",
-                    "header": "Seoul",
-                    "description": "Tropical Fruit World"
-                },
-                {
-                    "img": "path-to-img",
-                    "header": "Seoul",
-                    "description": "Tropical Fruit World"
-                },
-                {
-                    "img": "path-to-img",
-                    "header": "Seoul",
-                    "description": "Tropical Fruit World"
-                }
-            ]
-        },
-        {
-            "lat": -25.363 + 0.5,
-            "lng": 131.044 + 0.5,
-            "country": "South Korea 2",
-            "point": "Jeju Island 2",
-            "description": "Sun bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
-            "page-url": "#",
-            "preview": "img/promo-map/jeju-island.jpg?ee",
-            "inner-cards": [
-                {
-                    "img": "path-to-img",
-                    "header": "Seoul",
-                    "description": "Tropical Fruit World"
-                },
-                {
-                    "img": "path-to-img",
-                    "header": "Seoul",
-                    "description": "Tropical Fruit World"
-                },
-                {
-                    "img": "path-to-img",
-                    "header": "Seoul",
-                    "description": "Tropical Fruit World"
-                }
-            ]
-        }
-
-    ],
-    "meta": {
-        "name": "Ebash karty, bleat\'!!!"
-    }
-};
-
-
 (function (win, doc) {
 
     "use strict";
 
-    var map;
+    var dataFromSetver = {
+        "data": [
+            {
+                "lat": -25.363,
+                "lng": 131.044,
+                "country": "South Korea",
+                "point": "Jeju Island",
+                "description": "Sun bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
+                "page-url": "#link-to-region3",
+                "preview": "img/promo-map/jeju-island.jpg",
+                "inner-cards": [
+                    {
+                        "img": "img/promo-map/point-preview.jpg",
+                        "header": "Seoul",
+                        "description": "Tropical Fruit World"
+                    },
+                    {
+                        "img": "img/promo-map/point-preview.jpg",
+                        "header": "Seoul",
+                        "description": "Tropical Fruit World"
+                    },
+                    {
+                        "img": "img/promo-map/point-preview.jpg",
+                        "header": "Seoul",
+                        "description": "Tropical Fruit World"
+                    }
+                ]
+            },
+            {
+                "lat": -25.363 + 1,
+                "lng": 131.044 + 1,
+                "country": "South Korea 2",
+                "point": "South Korea 2",
+                "description": "Sun!!! bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
+                "page-url": "#link-to-region2",
+                "preview": "img/promo-map/kyoto.jpg",
+                "inner-cards": [
+                    {
+                        "img": "img/promo-map/point-preview.jpg",
+                        "header": "Seoulssdf",
+                        "description": "Tropical Fruit Worldasf"
+                    },
+                    {
+                        "img": "img/promo-map/point-preview.jpg",
+                        "header": "Seoulsfsa",
+                        "description": "Tropical Fruit Worldasf"
+                    },
+                    {
+                        "img": "img/promo-map/point-preview.jpg",
+                        "header": "Seoulsfas",
+                        "description": "Tropical Fruit Worldsaf"
+                    }
+                ]
+            },
+            {
+                "lat": -25.363 + 0.5,
+                "lng": 131.044 + 0.5,
+                "country": "South Korea 2",
+                "point": "Jeju Island 2",
+                "description": "Sun bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
+                "page-url": "#link-to-region1",
+                "preview": "img/promo-map/jeju-island.jpg?ee",
+                "inner-cards": [
+                    {
+                        "img": "img/promo-map/point-preview.jpg",
+                        "header": "Seoul",
+                        "description": "Tropical Fruit World"
+                    },
+                    {
+                        "img": "img/promo-map/point-preview.jpg",
+                        "header": "Seoul",
+                        "description": "Tropical Fruit World"
+                    },
+                    {
+                        "img": "img/promo-map/point-preview.jpg",
+                        "header": "Seoul",
+                        "description": "Tropical Fruit World"
+                    }
+                ]
+            }
+
+        ],
+        "meta": {
+            "name": "Ebash karty, bleat\'!!!"
+        }
+    };
+
+    var cardTemplate = [
+
+        '<div class="point-card js-point-card">',
+
+            '<a class="point-card__close js-point-card__close" href="#"></a>',
+            '<h3 class="point-card__header">{{= it.country }}</h3>',
+            '<h4 class="point-card__local-header">{{= it.point }}</h4>',
+            '<p class="point-card__local-description">{{= it.description }}</p>',
+
+            '<div class="scroll-area">',
+                '<div class="scroll-area__content">',
+                    '{{~ it[\'inner-cards\'] :item }}',
+                    '<div class="region-preview-item">',
+                        '<img src="{{= item.img }}" alt="" class="region-preview-item__image">',
+                        '<h3 class="region-preview-item__header">{{= item.header }}</h3>',
+                        '<p class="region-preview-item__paragraph">{{= item.description }}</p>',
+                    '</div>',
+                    '{{~}}',
+                '</div>',
+            '</div>',
+
+            '<a href="{{= it[\'page-url\'] }}" class="card-go-to">',
+                '<span class="card-go-to__text card-go-to__text--go-to">go to</span>',
+                '<span class="card-go-to__text">Jeju Island</span>',
+            '</a>',
+
+        '</div>'
+
+    ].join('');
+
+    var cardTemplateFn = doT.compile(cardTemplate);
+
+    // var map;
 
     var pathToMapPoint = 'i/map/map-point.svg';
 
     function RegionMap() {
 
-        var mapNode = doc.querySelector('.js-google-promo-map');
+        var regionMap = this,
+            mapNode = doc.querySelector('.js-google-promo-map');
 
         if (!mapNode) {
             return;
         }
 
-        this._mapNode = mapNode;
+        regionMap._mapNode = mapNode;
 
-        this._mapData = dataFromSetver;
+        regionMap._mapData = dataFromSetver;
 
-        this._map = new google.maps.Map(mapNode, {
-            center: this._mapData.data[0],
+        regionMap._map = new google.maps.Map(mapNode, {
+            center: regionMap._mapData.data[0],
             zoom: 8
         });
 
-        this._markers = [];
+        regionMap._markers = [];
 
-        this._addStyle();
-        this._addMarkers();
+        regionMap._addStyle();
+        regionMap._addMarkers();
+
+        google.maps.event.addListenerOnce(regionMap._map, 'tilesloaded', function(){
+            $('[title="' + regionMap._mapData.data[0].point + '"]').trigger('click');
+        });
 
     }
 
@@ -139,6 +175,36 @@ var dataFromSetver = {
 
     };
 
+    RegionMap.prototype.showCard = function (point) {
+
+        var regionMap = this,
+            data = regionMap._mapData.data,
+            cardData = {},
+            html;
+
+        regionMap.hideCard();
+
+        data.every(function (item) {
+            if (item.point === point) {
+                cardData = item;
+                return false;
+            }
+            return true;
+        });
+
+        html = cardTemplateFn(cardData);
+
+        $('.js-promo-map').append(html).find('.js-point-card__close').on('click', function (e) {
+            e.preventDefault();
+            regionMap.hideCard();
+        });
+
+    };
+
+    RegionMap.prototype.hideCard = function () {
+        $('.js-point-card').remove();
+    };
+
     RegionMap.prototype._addMarker = function (pointData) {
 
         var regionMap = this,
@@ -149,13 +215,12 @@ var dataFromSetver = {
                 // map: map,
                 draggable: false,
                 icon: pathToMapPoint,
-                optimized: false
-                // title: pointData.point
+                optimized: false,
+                title: pointData.point
             });
 
-        google.maps.event.addDomListener(window, 'load', function () {
+        google.maps.event.addDomListenerOnce(win, 'load', function onLoad() {
             $('img[src="' + pathToMapPoint + '"]').parent().addClass('region-map-point');
-            // $('div[title="' + pointData.point + '"]').append('<span class="region-map-point__title">' + pointData.point + '</span>');
         });
 
         google.maps.event.addDomListener(marker, 'mouseover', function () {
@@ -175,8 +240,7 @@ var dataFromSetver = {
             }).catch(function (e) {
                 console.log(e);
                 console.log('can not load img');
-            })
-
+            });
 
         });
 
@@ -201,6 +265,8 @@ var dataFromSetver = {
             $('.map-point-clicked').removeClass('map-point-clicked');
 
             marker.set('icon', pointData.preview);
+
+            regionMap.showCard(marker.title);
 
             $('img[src="' + pointData.preview + '"]').parent().each(function () {
                 $(this).addClass('map-point-clicked');

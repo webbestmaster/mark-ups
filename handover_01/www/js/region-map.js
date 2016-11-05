@@ -30,7 +30,7 @@ var dataFromSetver = {
             "lat": -25.363 + 1,
             "lng": 131.044 + 1,
             "country": "South Korea 2",
-            "point": "Jeju Island 2",
+            "point": "South Korea 2",
             "description": "Sun!!! bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
             "page-url": "#",
             "preview": "img/promo-map/kyoto.jpg",
@@ -91,7 +91,7 @@ var dataFromSetver = {
     "use strict";
 
     var map;
-    
+
     var pathToMapPoint = 'i/map/map-point.svg';
 
     function RegionMap() {
@@ -120,13 +120,20 @@ var dataFromSetver = {
 
     RegionMap.prototype._addStyle = function () {
 
-        var style = doc.createElement('style');
+        var style = doc.createElement('style'),
+            data = this._mapData.data;
 
-        style.innerText = this._mapData.data
+        style.innerText = data
                 .map(function (marker) {
                     return 'img[src="' + marker.preview + '"]';
                 })
                 .join(', ') + ' { border-radius: 50%; filter: grayscale(100%); border: 4px solid #fff !important; } '; // FUUUUCKKK!!!!!!
+
+        style.innerText += data
+                .map(function (marker) {
+                    return 'img[src="' + marker.preview + '"] + .region-map-point__title';
+                })
+                .join(', ') + ' { display: block; } '; // FUUUUCKKK!!!!!!
 
         doc.head.appendChild(style);
 
@@ -135,6 +142,7 @@ var dataFromSetver = {
     RegionMap.prototype._addMarker = function (pointData) {
 
         var regionMap = this,
+            mapNode = regionMap._mapNode,
             map = regionMap._map,
             marker = new google.maps.Marker({
                 position: {lat: pointData.lat, lng: pointData.lng},
@@ -147,20 +155,34 @@ var dataFromSetver = {
 
         google.maps.event.addDomListener(window, 'load', function () {
             $('img[src="' + pathToMapPoint + '"]').parent().addClass('region-map-point');
-
-
-
+            // $('div[title="' + pointData.point + '"]').append('<span class="region-map-point__title">' + pointData.point + '</span>');
         });
 
         google.maps.event.addDomListener(marker, 'mouseover', function () {
+
             marker.set('icon', pointData.preview);
+
+            win.util.waitFor(function () {
+                return $('img[src="' + pointData.preview + '"]', mapNode).length;
+            }).then(function () {
+                $('img[src="' + pointData.preview + '"]', mapNode).each(function () {
+                    var $parent = $(this).parent();
+                    if ($parent.find('.region-map-point__title').length) {
+                        return;
+                    }
+                    $parent.append('<span class="region-map-point__title">' + pointData.point + '</span>');
+                });
+            }).catch(function (e) {
+                console.log(e);
+                console.log('can not load img');
+            })
+
+
         });
 
         google.maps.event.addDomListener(marker, 'mouseout', function () {
 
-            // $('.map-point-hovered').removeClass('map-point-hovered');
-
-            var $imgs =  $('img[src="' + pointData.preview + '"]');
+            var $imgs = $('img[src="' + pointData.preview + '"]');
 
             if ($imgs.parent().hasClass('map-point-clicked')) {
                 return;
@@ -177,7 +199,6 @@ var dataFromSetver = {
             });
 
             $('.map-point-clicked').removeClass('map-point-clicked');
-            // $('.map-point-hovered').removeClass('map-point-hovered');
 
             marker.set('icon', pointData.preview);
 

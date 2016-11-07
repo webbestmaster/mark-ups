@@ -93,27 +93,37 @@
 
         '<div class="point-card js-point-card">',
 
-        '<a class="point-card__close js-point-card__close" href="#"></a>',
-        '<h3 class="point-card__header">{{= it.country }}</h3>',
-        '<h4 class="point-card__local-header">{{= it.point }}</h4>',
-        '<p class="point-card__local-description">{{= it.description }}</p>',
+            '<a class="point-card__close js-point-card__close" href="#"></a>',
+            '<h3 class="point-card__header">{{= it.country }}</h3>',
+            '<h4 class="point-card__local-header">{{= it.point }}</h4>',
+            '<p class="point-card__local-description">{{= it.description }}</p>',
 
-        '<div class="scroll-area">',
-        '<div class="scroll-area__content">',
-        '{{~ it[\'inner-cards\'] :item }}',
-        '<div class="region-preview-item">',
-        '<img src="{{= item.img }}" alt="" class="region-preview-item__image">',
-        '<h3 class="region-preview-item__header">{{= item.header }}</h3>',
-        '<p class="region-preview-item__paragraph">{{= item.description }}</p>',
-        '</div>',
-        '{{~}}',
-        '</div>',
-        '</div>',
+            '<div class="scroll-area">',
 
-        '<a href="{{= it[\'page-url\'] }}" class="card-go-to">',
-        '<span class="card-go-to__text card-go-to__text--go-to">go to</span>',
-        '<span class="card-go-to__text">Jeju Island</span>',
-        '</a>',
+                '<div class="scroll-area__swiper-container swiper-container">',
+
+                    '<div class="scroll-area__content swiper-wrapper">',
+                        '<div class="swiper-slide">',
+                        '{{~ it[\'inner-cards\'] :item }}',
+                        '<div class="region-preview-item">',
+                        '<img src="{{= item.img }}" alt="" class="region-preview-item__image">',
+                        '<h3 class="region-preview-item__header">{{= item.header }}</h3>',
+                        '<p class="region-preview-item__paragraph">{{= item.description }}</p>',
+                        '</div>',
+                        '{{~}}',
+                        '</div>',
+                    '</div>',
+
+                '</div>',
+
+                '<div class="swiper-scrollbar"></div>',
+
+            '</div>',
+
+            '<a href="{{= it[\'page-url\'] }}" class="card-go-to">',
+                '<span class="card-go-to__text card-go-to__text--go-to">go to</span>',
+                '<span class="card-go-to__text">Jeju Island</span>',
+            '</a>',
 
         '</div>'
 
@@ -313,8 +323,23 @@
         var elem = $('.js-point-card').get(0);
         if (elem) {
             var tl = new TimelineLite();
-            tl.from(elem, 2, {top: -100, opacity: 0, force3D: true});
+            tl.from(elem, 1, {top: -100, opacity: 0, force3D: true});
         }
+
+        // add swiper
+        var innerPoints = $('.js-point-card .region-preview-item');
+
+        $('.js-point-card .swiper-slide').height(
+            innerPoints.length * (innerPoints.height() + 10) // 10 it is vertical margins of blocks
+        );
+
+        var swiper = new Swiper('.js-point-card .swiper-container', {
+            scrollbar: '.swiper-scrollbar',
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            mousewheelControl: true,
+            freeMode: true
+        });
 
     };
 
@@ -329,7 +354,7 @@
                     elem.parentNode.removeChild(elem);
                 }
             });
-            tl.to(elem, 2, {top: 100, opacity: 0, force3D: true});
+            tl.to(elem, 1, {top: 100, opacity: 0, force3D: true});
         }
 
     };

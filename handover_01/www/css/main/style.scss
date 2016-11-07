@@ -28,11 +28,12 @@ body {
     content: '';
     display: block;
     clear: both;
+    float: none;
   }
 }
 
 .card-shadow {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 .for-mobile-only,

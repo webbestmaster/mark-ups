@@ -138,10 +138,14 @@
 
         regionMap._mapData = dataFromSetver;
 
+        regionMap._createMap();
+
+/*
         regionMap._map = new google.maps.Map(mapNode, {
             center: regionMap._mapData.data[0],
             zoom: 8
         });
+*/
 
         regionMap._markers = [];
 
@@ -166,6 +170,95 @@
         }
 
     }
+
+    RegionMap.prototype._createMap = function () {
+
+
+        // Create an array of styles.
+        var styles = [
+            {
+                stylers: [
+                    { color: "#95CC72" }
+                ]
+            },
+            {
+                featureType: "water",
+                elementType: "geometry",
+                stylers: [
+                    // { hue: "#00ffe6" },
+                    { color: "#C5F4FE" }
+                    // { saturation: -20 }
+                ]
+            },
+            {
+                featureType: "all",
+                elementType: "labels.text",
+                stylers: [
+                    { color: "#CC0000" }
+                ]
+            },
+            {
+                featureType: "all",
+                elementType: "labels.text.fill",
+                stylers: [
+                    { color: "#FFFFFF" }
+                ]
+            }
+
+        ];
+/*
+        var styles = [
+            {
+                stylers: [
+                    { hue: "#00ffe6" },
+                    { saturation: -20 }
+                ]
+            },
+            {
+                featureType: "road",
+                elementType: "geometry",
+                stylers: [
+                    { lightness: 100 },
+                    { visibility: "simplified" }
+                ]
+            },{
+                featureType: "road",
+                elementType: "labels",
+                stylers: [
+                    { visibility: "off" }
+                ]
+            }
+        ];
+*/
+
+        // Create a new StyledMapType object, passing it the array of styles,
+        // as well as the name to be displayed on the map type control.
+        var styledMap = new google.maps.StyledMapType(styles,
+            {name: "Styled Map"});
+
+        // Create a map object, and include the MapTypeId to add
+        // to the map type control.
+        var regionMap = this;
+
+        var mapOptions = {
+            zoom: 4,
+            center: regionMap._mapData.data[0],
+            mapTypeControlOptions: {
+                mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+            }
+        };
+
+        var mapNode = doc.querySelector('.js-google-promo-map');
+
+        var map = new google.maps.Map(mapNode,
+            mapOptions);
+
+        map.mapTypes.set('map_style', styledMap);
+        map.setMapTypeId('map_style');
+
+        regionMap._map = map;
+
+    };
 
     RegionMap.prototype.hideAll = function () {
 

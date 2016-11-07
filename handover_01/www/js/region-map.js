@@ -93,27 +93,27 @@
 
         '<div class="point-card js-point-card">',
 
-            '<a class="point-card__close js-point-card__close" href="#"></a>',
-            '<h3 class="point-card__header">{{= it.country }}</h3>',
-            '<h4 class="point-card__local-header">{{= it.point }}</h4>',
-            '<p class="point-card__local-description">{{= it.description }}</p>',
+        '<a class="point-card__close js-point-card__close" href="#"></a>',
+        '<h3 class="point-card__header">{{= it.country }}</h3>',
+        '<h4 class="point-card__local-header">{{= it.point }}</h4>',
+        '<p class="point-card__local-description">{{= it.description }}</p>',
 
-            '<div class="scroll-area">',
-                '<div class="scroll-area__content">',
-                    '{{~ it[\'inner-cards\'] :item }}',
-                    '<div class="region-preview-item">',
-                        '<img src="{{= item.img }}" alt="" class="region-preview-item__image">',
-                        '<h3 class="region-preview-item__header">{{= item.header }}</h3>',
-                        '<p class="region-preview-item__paragraph">{{= item.description }}</p>',
-                    '</div>',
-                    '{{~}}',
-                '</div>',
-            '</div>',
+        '<div class="scroll-area">',
+        '<div class="scroll-area__content">',
+        '{{~ it[\'inner-cards\'] :item }}',
+        '<div class="region-preview-item">',
+        '<img src="{{= item.img }}" alt="" class="region-preview-item__image">',
+        '<h3 class="region-preview-item__header">{{= item.header }}</h3>',
+        '<p class="region-preview-item__paragraph">{{= item.description }}</p>',
+        '</div>',
+        '{{~}}',
+        '</div>',
+        '</div>',
 
-            '<a href="{{= it[\'page-url\'] }}" class="card-go-to">',
-                '<span class="card-go-to__text card-go-to__text--go-to">go to</span>',
-                '<span class="card-go-to__text">Jeju Island</span>',
-            '</a>',
+        '<a href="{{= it[\'page-url\'] }}" class="card-go-to">',
+        '<span class="card-go-to__text card-go-to__text--go-to">go to</span>',
+        '<span class="card-go-to__text">Jeju Island</span>',
+        '</a>',
 
         '</div>'
 
@@ -140,12 +140,12 @@
 
         regionMap._createMap();
 
-/*
-        regionMap._map = new google.maps.Map(mapNode, {
-            center: regionMap._mapData.data[0],
-            zoom: 8
-        });
-*/
+        /*
+         regionMap._map = new google.maps.Map(mapNode, {
+         center: regionMap._mapData.data[0],
+         zoom: 8
+         });
+         */
 
         regionMap._markers = [];
 
@@ -156,15 +156,15 @@
             $('img[src="' + pathToMapPoint + '"]').parent().addClass('region-map-point');
         });
 
-        regionMap._map.addListener('click', function() {
+        regionMap._map.addListener('click', function () {
             regionMap.hideAll();
         });
 
         if (!mapNode.classList.contains('js-do-not-click')) {
-            google.maps.event.addListenerOnce(regionMap._map, 'tilesloaded', function(){
-                new google.maps.event.trigger( regionMap._markers[0], 'mouseover');
+            google.maps.event.addListenerOnce(regionMap._map, 'tilesloaded', function () {
+                new google.maps.event.trigger(regionMap._markers[0], 'mouseover');
                 setTimeout(function () {
-                    new google.maps.event.trigger( regionMap._markers[0], 'click' );
+                    new google.maps.event.trigger(regionMap._markers[0], 'click');
                 }, 1000);
             });
         }
@@ -173,85 +173,76 @@
 
     RegionMap.prototype._createMap = function () {
 
+        var regionMap = this;
 
-        // Create an array of styles.
+        var mapNode = doc.querySelector('.js-google-promo-map');
+
         var styles = [
             {
-                stylers: [
-                    { color: "#95CC72" }
-                ]
-            },
-            {
-                featureType: "water",
+                featureType: "all",
                 elementType: "geometry",
                 stylers: [
-                    // { hue: "#00ffe6" },
-                    { color: "#C5F4FE" }
-                    // { saturation: -20 }
-                ]
-            },
-            {
-                featureType: "all",
-                elementType: "labels.text",
-                stylers: [
-                    { color: "#CC0000" }
+                    {color: "#95CC72"}
                 ]
             },
             {
                 featureType: "all",
                 elementType: "labels.text.fill",
                 stylers: [
-                    { color: "#FFFFFF" }
-                ]
-            }
-
-        ];
-/*
-        var styles = [
-            {
-                stylers: [
-                    { hue: "#00ffe6" },
-                    { saturation: -20 }
+                    {color: "#f5f5f5"}
                 ]
             },
             {
-                featureType: "road",
+                featureType: "water",
                 elementType: "geometry",
                 stylers: [
-                    { lightness: 100 },
-                    { visibility: "simplified" }
+                    {color: "#C5F4FE"}
                 ]
-            },{
-                featureType: "road",
-                elementType: "labels",
+            },
+            {
+                featureType: "administrative.country",
+                elementType: "geometry.stroke",
                 stylers: [
-                    { visibility: "off" }
+                    {color: "#f5f5f5"},
+                    {weight: 0.5}
+                ]
+            },
+            {
+                featureType: "administrative_area_level_1",
+                elementType: "labels.text",
+                stylers: [
+                    {visibility: "off"}
+                ]
+            },
+            {
+                featureType: "administrative.country",
+                elementType: "labels.text",
+                stylers: [
+                    {visibility: "on"}
+                ]
+            },
+            {
+                featureType: "all",
+                elementType: "labels.text.stroke",
+                stylers: [
+                    {visibility: "off"}
                 ]
             }
+
         ];
-*/
 
-        // Create a new StyledMapType object, passing it the array of styles,
-        // as well as the name to be displayed on the map type control.
-        var styledMap = new google.maps.StyledMapType(styles,
-            {name: "Styled Map"});
+        var styledMap = new google.maps.StyledMapType(
+            styles,
+            {name: "Styled Map"}
+        );
 
-        // Create a map object, and include the MapTypeId to add
-        // to the map type control.
-        var regionMap = this;
-
-        var mapOptions = {
-            zoom: 4,
-            center: regionMap._mapData.data[0],
-            mapTypeControlOptions: {
-                mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        var map = new google.maps.Map(
+            mapNode,
+            {
+                zoom: 4,
+                center: regionMap._mapData.data[0]
             }
-        };
-
-        var mapNode = doc.querySelector('.js-google-promo-map');
-
-        var map = new google.maps.Map(mapNode,
-            mapOptions);
+        );
 
         map.mapTypes.set('map_style', styledMap);
         map.setMapTypeId('map_style');
@@ -322,7 +313,7 @@
         var elem = $('.js-point-card').get(0);
         if (elem) {
             var tl = new TimelineLite();
-            tl.from(elem, 2, { top: -100, opacity: 0, force3D: true });
+            tl.from(elem, 2, {top: -100, opacity: 0, force3D: true});
         }
 
     };
@@ -333,10 +324,12 @@
 
         if (elem) {
             elem.classList.remove('js-point-card');
-            var tl = new TimelineLite({onComplete: function () {
-                elem.parentNode.removeChild(elem);
-            }});
-            tl.to(elem, 2, { top: 100, opacity: 0, force3D: true });
+            var tl = new TimelineLite({
+                onComplete: function () {
+                    elem.parentNode.removeChild(elem);
+                }
+            });
+            tl.to(elem, 2, {top: 100, opacity: 0, force3D: true});
         }
 
     };

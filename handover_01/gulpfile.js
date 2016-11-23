@@ -16,7 +16,9 @@ const tinypng = require('gulp-tinypng');
 const server = require('gulp-server-livereload');
 
 const rootFolder = 'www';
+const rootIndexHtmlFolder = path.join(rootFolder, 'pages');
 const distFolder = 'dist';
+const distIndexHtmlFolder = path.join(distFolder, 'pages');
 const staticFolders = ['img', 'i', 'font'];
 
 const readFiles = require('./gulp/my-gulp-util').readFiles;
@@ -31,18 +33,18 @@ gulp.task('dot', function (cb) {
 
     readFiles(path.join(rootFolder, 'chunks'), {test: /\.dot$/})
         .then(chunks =>
-            gulp.src(path.join(rootFolder, '*.html'))
+            gulp.src(path.join(rootIndexHtmlFolder, '*.html'))
                 .pipe(template({chunks, dot}))
-                .pipe(gulp.dest(distFolder))
+                .pipe(gulp.dest(distIndexHtmlFolder))
                 .on('end', cb)
         );
 
 });
 
 gulp.task('prettify-html', function () {
-    return gulp.src(path.join(distFolder, '*.html'))
+    return gulp.src(path.join(distIndexHtmlFolder, '*.html'))
         .pipe(prettifyHtml({indent_char: ' ', indent_size: 4}))
-        .pipe(gulp.dest(distFolder));
+        .pipe(gulp.dest(distIndexHtmlFolder));
 });
 
 gulp.task('html', gulp.series('dot', 'prettify-html'));

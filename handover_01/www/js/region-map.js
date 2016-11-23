@@ -11,20 +11,20 @@
                 "point": "Jeju Island",
                 "description": "Sun bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
                 "page-url": "#link-to-region3",
-                "preview": "img/promo-map/jeju-island.jpg",
+                "preview": "../img/promo-map/jeju-island.jpg",
                 "inner-cards": [
                     {
-                        "img": "img/promo-map/point-preview.jpg",
+                        "img": "../img/promo-map/point-preview.jpg",
                         "header": "Seoul",
                         "description": "Tropical Fruit World"
                     },
                     {
-                        "img": "img/promo-map/point-preview.jpg",
+                        "img": "../img/promo-map/point-preview.jpg",
                         "header": "Seoul",
                         "description": "Tropical Fruit World"
                     },
                     {
-                        "img": "img/promo-map/point-preview.jpg",
+                        "img": "../img/promo-map/point-preview.jpg",
                         "header": "Seoul",
                         "description": "Tropical Fruit World"
                     }
@@ -37,20 +37,20 @@
                 "point": "South Korea 2",
                 "description": "Sun!!! bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
                 "page-url": "#link-to-region2",
-                "preview": "img/promo-map/kyoto.jpg",
+                "preview": "../img/promo-map/kyoto.jpg",
                 "inner-cards": [
                     {
-                        "img": "img/promo-map/point-preview.jpg",
+                        "img": "../img/promo-map/point-preview.jpg",
                         "header": "Seoulssdf",
                         "description": "Tropical Fruit Worldasf"
                     },
                     {
-                        "img": "img/promo-map/point-preview.jpg",
+                        "img": "../img/promo-map/point-preview.jpg",
                         "header": "Seoulsfsa",
                         "description": "Tropical Fruit Worldasf"
                     },
                     {
-                        "img": "img/promo-map/point-preview.jpg",
+                        "img": "../img/promo-map/point-preview.jpg",
                         "header": "Seoulsfas",
                         "description": "Tropical Fruit Worldsaf"
                     }
@@ -63,20 +63,20 @@
                 "point": "Jeju Island 2",
                 "description": "Sun bathe peer out window, chatter at birds, lure them to mouth but purr while eating chew iPad power cord.",
                 "page-url": "#link-to-region1",
-                "preview": "img/promo-map/jeju-island.jpg?ee",
+                "preview": "../img/promo-map/jeju-island.jpg?ee",
                 "inner-cards": [
                     {
-                        "img": "img/promo-map/point-preview.jpg",
+                        "img": "../img/promo-map/point-preview.jpg",
                         "header": "Seoul",
                         "description": "Tropical Fruit World"
                     },
                     {
-                        "img": "img/promo-map/point-preview.jpg",
+                        "img": "../img/promo-map/point-preview.jpg",
                         "header": "Seoul",
                         "description": "Tropical Fruit World"
                     },
                     {
-                        "img": "img/promo-map/point-preview.jpg",
+                        "img": "../img/promo-map/point-preview.jpg",
                         "header": "Seoul",
                         "description": "Tropical Fruit World"
                     }
@@ -133,7 +133,7 @@
 
     // var map;
 
-    var pathToMapPoint = 'i/map/map-point.svg';
+    var pathToMapPoint = '../i/map/map-point.svg';
 
     function RegionMap() {
 

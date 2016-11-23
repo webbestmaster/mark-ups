@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One Tank</title>
+</head>
+
+<style>
+
+    canvas,
+    html, body {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    canvas {
+        min-width: 100%;
+    }
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.1.1/pixi.min.js"></script>
+
+<body>
+
+
+<script>
+
+    (function () {
+
+        var renderer = PIXI.autoDetectRenderer(800, 600);
+        document.body.appendChild(renderer.view);
+
+        var stage = new PIXI.Container();
+
+        var list = [];
+
+        for (var i = 1; i < 30; i++) {
+            list.push('images/snap_' + (i < 10 ? '0' : '') + i + '.png');
+        }
+
+        PIXI.loader
+            .add(list)
+            .load(onAssetsLoaded);
+
+
+        function onAssetsLoaded() {
+
+            // create an array to store the textures
+            var tankTextures = [],
+                i;
+
+            for (i = 1; i < 30; i++) {
+                var texture = PIXI.Texture.fromImage('images/snap_' + (i < 10 ? '0' : '') + i + '.png');
+                tankTextures.push(texture);
+            }
+
+            var tankClip = new PIXI.extras.MovieClip(tankTextures);
+            tankClip.gotoAndPlay(0);
+            stage.addChild(tankClip);
+
+            requestAnimationFrame(animate);
+
+        }
+
+        function animate() {
+            renderer.render(stage);
+
+            requestAnimationFrame(animate);
+        }
+
+    }())
+
+</script>
+
+
+</body>
+</html>
